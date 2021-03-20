@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06597F2902A0C3DDA2A73555 /* Pods_MedMinerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F2604454AAB7D713279EC2 /* Pods_MedMinerTests.framework */; };
+		120C1F0425FF8A8C00549C0E /* HandleTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C1F0325FF8A8C00549C0E /* HandleTapView.swift */; };
+		1219489E25EE479600D7FFE7 /* DrugstoreHasDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */; };
+		1233425C25E287C20053FEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233425B25E287C20053FEAF /* AppDelegate.swift */; };
+		1233425E25E287C20053FEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233425D25E287C20053FEAF /* SceneDelegate.swift */; };
+		1233426325E287C20053FEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1233426125E287C20053FEAF /* Main.storyboard */; };
+		1233426525E287C30053FEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1233426425E287C30053FEAF /* Assets.xcassets */; };
+		1233426825E287C30053FEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1233426625E287C30053FEAF /* LaunchScreen.storyboard */; };
+		1233427325E287C40053FEAF /* MedMinerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233427225E287C40053FEAF /* MedMinerTests.swift */; };
+		1233427E25E287C40053FEAF /* MedMinerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233427D25E287C40053FEAF /* MedMinerUITests.swift */; };
+		1233429B25E288D70053FEAF /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233429225E288D70053FEAF /* SearchService.swift */; };
+		1233429D25E288D70053FEAF /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233429625E288D70053FEAF /* Drug.swift */; };
+		1233429E25E288D70053FEAF /* DrugStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233429725E288D70053FEAF /* DrugStore.swift */; };
+		1233429F25E288D70053FEAF /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233429A25E288D70053FEAF /* SearchVC.swift */; };
+		123342C225E28BA80053FEAF /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123342C125E28BA80053FEAF /* KeyboardBoundView.swift */; };
+		123342C725E28C030053FEAF /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123342C625E28C030053FEAF /* DrugCell.swift */; };
+		1235CB8125FE02B4003D7CA0 /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235CB8025FE02B4003D7CA0 /* KeyboardService.swift */; };
+		1252A39025FBA9CF00F5AE25 /* UiviewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1252A38F25FBA9CF00F5AE25 /* UiviewControllerExtentions.swift */; };
+		1252A39D25FBC1B700F5AE25 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1252A39C25FBC1B700F5AE25 /* CircleImage.swift */; };
+		1259058325FF2BC7003579A7 /* RoundCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259058225FF2BC7003579A7 /* RoundCurveView.swift */; };
+		126A012B25EC9D11007721F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126A012A25EC9D11007721F9 /* Constants.swift */; };
+		1272623025FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272622F25FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift */; };
+		1277317F2600937200F5CB30 /* DrugStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1277317E2600937200F5CB30 /* DrugStoreCell.swift */; };
+		1277318426009CD900F5CB30 /* RoundCurveImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1277318326009CD900F5CB30 /* RoundCurveImg.swift */; };
+		127731892600BC2E00F5CB30 /* DrugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127731882600BC2E00F5CB30 /* DrugVC.swift */; };
+		12B604E02601305E00961A54 /* StoreWithDrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */; };
+		12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604E426014E5C00961A54 /* DrugInfoVC.swift */; };
+		12C403FA25FB732A00311E73 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C403F925FB732A00311E73 /* SWRevealViewController.m */; };
+		12C403FF25FB89A200311E73 /* UserMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C403FE25FB89A200311E73 /* UserMenuVC.swift */; };
+		12FC2B02260267560015DD7E /* DrugsInStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */; };
+		12FE4B2C25FCFB7A003861FD /* DrugStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE4B2B25FCFB7A003861FD /* DrugStoreVC.swift */; };
+		59EF3AAA827ACAD6AD5D3904 /* Pods_MedMinerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EC1CAA1D9C8A19204F56A8 /* Pods_MedMinerUITests.framework */; };
+		FB59F8ABBE72E1381CE2026F /* Pods_MedMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64821182B3BD0CE217492F17 /* Pods_MedMiner.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1233426F25E287C40053FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1233425025E287C20053FEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1233425725E287C20053FEAF;
+			remoteInfo = MedMiner;
+		};
+		1233427A25E287C40053FEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1233425025E287C20053FEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1233425725E287C20053FEAF;
+			remoteInfo = MedMiner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		120C1F0325FF8A8C00549C0E /* HandleTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTapView.swift; sourceTree = "<group>"; };
+		1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugstoreHasDrugs.swift; sourceTree = "<group>"; };
+		1233425825E287C20053FEAF /* MedMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1233425B25E287C20053FEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1233425D25E287C20053FEAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1233426225E287C20053FEAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1233426425E287C30053FEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1233426725E287C30053FEAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1233426925E287C30053FEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1233426E25E287C40053FEAF /* MedMinerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedMinerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1233427225E287C40053FEAF /* MedMinerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedMinerTests.swift; sourceTree = "<group>"; };
+		1233427425E287C40053FEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1233427925E287C40053FEAF /* MedMinerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedMinerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1233427D25E287C40053FEAF /* MedMinerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedMinerUITests.swift; sourceTree = "<group>"; };
+		1233427F25E287C40053FEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1233429225E288D70053FEAF /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		1233429625E288D70053FEAF /* Drug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		1233429725E288D70053FEAF /* DrugStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugStore.swift; sourceTree = "<group>"; };
+		1233429A25E288D70053FEAF /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		123342C125E28BA80053FEAF /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		123342C625E28C030053FEAF /* DrugCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
+		1235CB8025FE02B4003D7CA0 /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
+		1252A38F25FBA9CF00F5AE25 /* UiviewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiviewControllerExtentions.swift; sourceTree = "<group>"; };
+		1252A39C25FBC1B700F5AE25 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		1259058225FF2BC7003579A7 /* RoundCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCurveView.swift; sourceTree = "<group>"; };
+		126A012A25EC9D11007721F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1272622F25FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		1277317E2600937200F5CB30 /* DrugStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugStoreCell.swift; sourceTree = "<group>"; };
+		1277318326009CD900F5CB30 /* RoundCurveImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCurveImg.swift; sourceTree = "<group>"; };
+		127731882600BC2E00F5CB30 /* DrugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugVC.swift; sourceTree = "<group>"; };
+		12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWithDrugCell.swift; sourceTree = "<group>"; };
+		12B604E426014E5C00961A54 /* DrugInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInfoVC.swift; sourceTree = "<group>"; };
+		12C403F725FB732900311E73 /* MedMiner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedMiner-Bridging-Header.h"; sourceTree = "<group>"; };
+		12C403F825FB732A00311E73 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		12C403F925FB732A00311E73 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		12C403FE25FB89A200311E73 /* UserMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuVC.swift; sourceTree = "<group>"; };
+		12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsInStoreCell.swift; sourceTree = "<group>"; };
+		12FE4B2B25FCFB7A003861FD /* DrugStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugStoreVC.swift; sourceTree = "<group>"; };
+		44F842CEFE0407DC00EC0CB4 /* Pods-MedMinerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMinerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedMinerUITests/Pods-MedMinerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		64821182B3BD0CE217492F17 /* Pods_MedMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BC96AAFA94A7B31A8B055A /* Pods-MedMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedMiner/Pods-MedMiner.debug.xcconfig"; sourceTree = "<group>"; };
+		70EC1CAA1D9C8A19204F56A8 /* Pods_MedMinerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMinerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CFCEA28D4859EF49B06831 /* Pods-MedMinerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMinerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedMinerTests/Pods-MedMinerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98F21B39BBE1B4C2EE116A49 /* Pods-MedMinerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMinerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedMinerUITests/Pods-MedMinerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1EEF680506734878287D04 /* Pods-MedMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedMiner/Pods-MedMiner.release.xcconfig"; sourceTree = "<group>"; };
+		E2F2604454AAB7D713279EC2 /* Pods_MedMinerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedMinerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB4DF61005DDEFD6ACD1E86 /* Pods-MedMinerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMinerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedMinerTests/Pods-MedMinerTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1233425525E287C20053FEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB59F8ABBE72E1381CE2026F /* Pods_MedMiner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1233426B25E287C40053FEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06597F2902A0C3DDA2A73555 /* Pods_MedMinerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1233427625E287C40053FEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EF3AAA827ACAD6AD5D3904 /* Pods_MedMinerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1233424F25E287C20053FEAF = {
+			isa = PBXGroup;
+			children = (
+				1233425A25E287C20053FEAF /* MedMiner */,
+				1233427125E287C40053FEAF /* MedMinerTests */,
+				1233427C25E287C40053FEAF /* MedMinerUITests */,
+				1233425925E287C20053FEAF /* Products */,
+				8F0AE811BE0864744CA39E12 /* Pods */,
+				42736C25EF44A2540F74C924 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1233425925E287C20053FEAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1233425825E287C20053FEAF /* MedMiner.app */,
+				1233426E25E287C40053FEAF /* MedMinerTests.xctest */,
+				1233427925E287C40053FEAF /* MedMinerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1233425A25E287C20053FEAF /* MedMiner */ = {
+			isa = PBXGroup;
+			children = (
+				12C403F625FB72FD00311E73 /* Supporting Files */,
+				1233429825E288D70053FEAF /* Utilities */,
+				1233429125E288D70053FEAF /* Services */,
+				1233429525E288D70053FEAF /* Model */,
+				1233429325E288D70053FEAF /* View */,
+				1233429925E288D70053FEAF /* Controller */,
+				1233425B25E287C20053FEAF /* AppDelegate.swift */,
+				1233425D25E287C20053FEAF /* SceneDelegate.swift */,
+				1233426125E287C20053FEAF /* Main.storyboard */,
+				1233426425E287C30053FEAF /* Assets.xcassets */,
+				1233426625E287C30053FEAF /* LaunchScreen.storyboard */,
+				1233426925E287C30053FEAF /* Info.plist */,
+			);
+			path = MedMiner;
+			sourceTree = "<group>";
+		};
+		1233427125E287C40053FEAF /* MedMinerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1233427225E287C40053FEAF /* MedMinerTests.swift */,
+				1233427425E287C40053FEAF /* Info.plist */,
+			);
+			path = MedMinerTests;
+			sourceTree = "<group>";
+		};
+		1233427C25E287C40053FEAF /* MedMinerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1233427D25E287C40053FEAF /* MedMinerUITests.swift */,
+				1233427F25E287C40053FEAF /* Info.plist */,
+			);
+			path = MedMinerUITests;
+			sourceTree = "<group>";
+		};
+		1233429125E288D70053FEAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1272622F25FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift */,
+				1233429225E288D70053FEAF /* SearchService.swift */,
+				1235CB8025FE02B4003D7CA0 /* KeyboardService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1233429325E288D70053FEAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1252A38E25FBA98400F5AE25 /* Extentions */,
+				123342C625E28C030053FEAF /* DrugCell.swift */,
+				1252A39C25FBC1B700F5AE25 /* CircleImage.swift */,
+				1259058225FF2BC7003579A7 /* RoundCurveView.swift */,
+				120C1F0325FF8A8C00549C0E /* HandleTapView.swift */,
+				1277317E2600937200F5CB30 /* DrugStoreCell.swift */,
+				1277318326009CD900F5CB30 /* RoundCurveImg.swift */,
+				12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */,
+				12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1233429525E288D70053FEAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1233429625E288D70053FEAF /* Drug.swift */,
+				1233429725E288D70053FEAF /* DrugStore.swift */,
+				1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1233429825E288D70053FEAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				126A012A25EC9D11007721F9 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1233429925E288D70053FEAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1233429A25E288D70053FEAF /* SearchVC.swift */,
+				12C403FE25FB89A200311E73 /* UserMenuVC.swift */,
+				12FE4B2B25FCFB7A003861FD /* DrugStoreVC.swift */,
+				127731882600BC2E00F5CB30 /* DrugVC.swift */,
+				12B604E426014E5C00961A54 /* DrugInfoVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1252A38E25FBA98400F5AE25 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				123342C125E28BA80053FEAF /* KeyboardBoundView.swift */,
+				1252A38F25FBA9CF00F5AE25 /* UiviewControllerExtentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		12C403F625FB72FD00311E73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12C403F825FB732A00311E73 /* SWRevealViewController.h */,
+				12C403F925FB732A00311E73 /* SWRevealViewController.m */,
+				12C403F725FB732900311E73 /* MedMiner-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42736C25EF44A2540F74C924 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64821182B3BD0CE217492F17 /* Pods_MedMiner.framework */,
+				E2F2604454AAB7D713279EC2 /* Pods_MedMinerTests.framework */,
+				70EC1CAA1D9C8A19204F56A8 /* Pods_MedMinerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F0AE811BE0864744CA39E12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70BC96AAFA94A7B31A8B055A /* Pods-MedMiner.debug.xcconfig */,
+				AE1EEF680506734878287D04 /* Pods-MedMiner.release.xcconfig */,
+				83CFCEA28D4859EF49B06831 /* Pods-MedMinerTests.debug.xcconfig */,
+				FEB4DF61005DDEFD6ACD1E86 /* Pods-MedMinerTests.release.xcconfig */,
+				98F21B39BBE1B4C2EE116A49 /* Pods-MedMinerUITests.debug.xcconfig */,
+				44F842CEFE0407DC00EC0CB4 /* Pods-MedMinerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1233425725E287C20053FEAF /* MedMiner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1233428225E287C40053FEAF /* Build configuration list for PBXNativeTarget "MedMiner" */;
+			buildPhases = (
+				68B4A5AC686C5BDE74008C8A /* [CP] Check Pods Manifest.lock */,
+				1233425425E287C20053FEAF /* Sources */,
+				1233425525E287C20053FEAF /* Frameworks */,
+				1233425625E287C20053FEAF /* Resources */,
+				2A0C109BB679758C5ECB8BAE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedMiner;
+			productName = MedMiner;
+			productReference = 1233425825E287C20053FEAF /* MedMiner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1233426D25E287C40053FEAF /* MedMinerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1233428525E287C40053FEAF /* Build configuration list for PBXNativeTarget "MedMinerTests" */;
+			buildPhases = (
+				FA8BE6F150086756225E581A /* [CP] Check Pods Manifest.lock */,
+				1233426A25E287C40053FEAF /* Sources */,
+				1233426B25E287C40053FEAF /* Frameworks */,
+				1233426C25E287C40053FEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1233427025E287C40053FEAF /* PBXTargetDependency */,
+			);
+			name = MedMinerTests;
+			productName = MedMinerTests;
+			productReference = 1233426E25E287C40053FEAF /* MedMinerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1233427825E287C40053FEAF /* MedMinerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1233428825E287C40053FEAF /* Build configuration list for PBXNativeTarget "MedMinerUITests" */;
+			buildPhases = (
+				CC5917CE64BBA817B40570C5 /* [CP] Check Pods Manifest.lock */,
+				1233427525E287C40053FEAF /* Sources */,
+				1233427625E287C40053FEAF /* Frameworks */,
+				1233427725E287C40053FEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1233427B25E287C40053FEAF /* PBXTargetDependency */,
+			);
+			name = MedMinerUITests;
+			productName = MedMinerUITests;
+			productReference = 1233427925E287C40053FEAF /* MedMinerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1233425025E287C20053FEAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					1233425725E287C20053FEAF = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					1233426D25E287C40053FEAF = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 1233425725E287C20053FEAF;
+					};
+					1233427825E287C40053FEAF = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 1233425725E287C20053FEAF;
+					};
+				};
+			};
+			buildConfigurationList = 1233425325E287C20053FEAF /* Build configuration list for PBXProject "MedMiner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1233424F25E287C20053FEAF;
+			productRefGroup = 1233425925E287C20053FEAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1233425725E287C20053FEAF /* MedMiner */,
+				1233426D25E287C40053FEAF /* MedMinerTests */,
+				1233427825E287C40053FEAF /* MedMinerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1233425625E287C20053FEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1233426825E287C30053FEAF /* LaunchScreen.storyboard in Resources */,
+				1233426525E287C30053FEAF /* Assets.xcassets in Resources */,
+				1233426325E287C20053FEAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1233426C25E287C40053FEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1233427725E287C40053FEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A0C109BB679758C5ECB8BAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MedMiner/Pods-MedMiner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIResponder+KeyboardCache/UIResponder_KeyboardCache.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIResponder_KeyboardCache.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedMiner/Pods-MedMiner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68B4A5AC686C5BDE74008C8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedMiner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC5917CE64BBA817B40570C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedMinerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA8BE6F150086756225E581A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedMinerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1233425425E287C20053FEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1235CB8125FE02B4003D7CA0 /* KeyboardService.swift in Sources */,
+				1233429F25E288D70053FEAF /* SearchVC.swift in Sources */,
+				127731892600BC2E00F5CB30 /* DrugVC.swift in Sources */,
+				1233429B25E288D70053FEAF /* SearchService.swift in Sources */,
+				1259058325FF2BC7003579A7 /* RoundCurveView.swift in Sources */,
+				1233425C25E287C20053FEAF /* AppDelegate.swift in Sources */,
+				12FC2B02260267560015DD7E /* DrugsInStoreCell.swift in Sources */,
+				1252A39D25FBC1B700F5AE25 /* CircleImage.swift in Sources */,
+				123342C725E28C030053FEAF /* DrugCell.swift in Sources */,
+				120C1F0425FF8A8C00549C0E /* HandleTapView.swift in Sources */,
+				12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */,
+				12C403FF25FB89A200311E73 /* UserMenuVC.swift in Sources */,
+				1277317F2600937200F5CB30 /* DrugStoreCell.swift in Sources */,
+				123342C225E28BA80053FEAF /* KeyboardBoundView.swift in Sources */,
+				1219489E25EE479600D7FFE7 /* DrugstoreHasDrugs.swift in Sources */,
+				1252A39025FBA9CF00F5AE25 /* UiviewControllerExtentions.swift in Sources */,
+				1233425E25E287C20053FEAF /* SceneDelegate.swift in Sources */,
+				1233429E25E288D70053FEAF /* DrugStore.swift in Sources */,
+				12FE4B2C25FCFB7A003861FD /* DrugStoreVC.swift in Sources */,
+				12C403FA25FB732A00311E73 /* SWRevealViewController.m in Sources */,
+				1233429D25E288D70053FEAF /* Drug.swift in Sources */,
+				1272623025FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift in Sources */,
+				12B604E02601305E00961A54 /* StoreWithDrugCell.swift in Sources */,
+				126A012B25EC9D11007721F9 /* Constants.swift in Sources */,
+				1277318426009CD900F5CB30 /* RoundCurveImg.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1233426A25E287C40053FEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1233427325E287C40053FEAF /* MedMinerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1233427525E287C40053FEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1233427E25E287C40053FEAF /* MedMinerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1233427025E287C40053FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1233425725E287C20053FEAF /* MedMiner */;
+			targetProxy = 1233426F25E287C40053FEAF /* PBXContainerItemProxy */;
+		};
+		1233427B25E287C40053FEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1233425725E287C20053FEAF /* MedMiner */;
+			targetProxy = 1233427A25E287C40053FEAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1233426125E287C20053FEAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1233426225E287C20053FEAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1233426625E287C30053FEAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1233426725E287C30053FEAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1233428025E287C40053FEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1233428125E287C40053FEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1233428325E287C40053FEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BC96AAFA94A7B31A8B055A /* Pods-MedMiner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRVFL5U9Z4;
+				INFOPLIST_FILE = MedMiner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.nhr.MedMiner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MedMiner/Supporting Files/MedMiner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1233428425E287C40053FEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE1EEF680506734878287D04 /* Pods-MedMiner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRVFL5U9Z4;
+				INFOPLIST_FILE = MedMiner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.nhr.MedMiner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MedMiner/Supporting Files/MedMiner-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1233428625E287C40053FEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83CFCEA28D4859EF49B06831 /* Pods-MedMinerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRVFL5U9Z4;
+				INFOPLIST_FILE = MedMinerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHR.MedMinerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedMiner.app/MedMiner";
+			};
+			name = Debug;
+		};
+		1233428725E287C40053FEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEB4DF61005DDEFD6ACD1E86 /* Pods-MedMinerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRVFL5U9Z4;
+				INFOPLIST_FILE = MedMinerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHR.MedMinerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedMiner.app/MedMiner";
+			};
+			name = Release;
+		};
+		1233428925E287C40053FEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F21B39BBE1B4C2EE116A49 /* Pods-MedMinerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRVFL5U9Z4;
+				INFOPLIST_FILE = MedMinerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHR.MedMinerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedMiner;
+			};
+			name = Debug;
+		};
+		1233428A25E287C40053FEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F842CEFE0407DC00EC0CB4 /* Pods-MedMinerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RRVFL5U9Z4;
+				INFOPLIST_FILE = MedMinerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NHR.MedMinerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedMiner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1233425325E287C20053FEAF /* Build configuration list for PBXProject "MedMiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1233428025E287C40053FEAF /* Debug */,
+				1233428125E287C40053FEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1233428225E287C40053FEAF /* Build configuration list for PBXNativeTarget "MedMiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1233428325E287C40053FEAF /* Debug */,
+				1233428425E287C40053FEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1233428525E287C40053FEAF /* Build configuration list for PBXNativeTarget "MedMinerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1233428625E287C40053FEAF /* Debug */,
+				1233428725E287C40053FEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1233428825E287C40053FEAF /* Build configuration list for PBXNativeTarget "MedMinerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1233428925E287C40053FEAF /* Debug */,
+				1233428A25E287C40053FEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1233425025E287C20053FEAF /* Project object */;
+}

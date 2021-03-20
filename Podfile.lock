@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.9.0)
+  - SwiftyJSON (5.0.0)
+  - "UIResponder+KeyboardCache (0.1)"
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftyJSON
+  - "UIResponder+KeyboardCache"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SwiftyJSON
+    - "UIResponder+KeyboardCache"
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  "UIResponder+KeyboardCache": dc1b7ff925c25ddb58b289bc71a3724c269767ef
+
+PODFILE CHECKSUM: 424a3e301dd060d112d81c1eac4a0e4383372fef
+
+COCOAPODS: 1.5.2

@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v61-qd-BfO">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchVC" customModule="MedMiner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="77j-hF-L8a">
+                                <rect key="frame" x="132.66666666666666" y="15" width="162.99999999999997" height="32"/>
+                                <segments>
+                                    <segment title="drug"/>
+                                    <segment title="drugStore"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControllChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9PA-wJ-G70"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="100" sectionHeaderHeight="19" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CmE-Xz-SHk">
+                                <rect key="frame" x="0.0" y="61" width="428" height="715"/>
+                                <color key="separatorColor" systemColor="labelColor"/>
+                                <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="medicineCell" rowHeight="100" id="SbP-67-dsh" customClass="DrugCell" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="388" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SbP-67-dsh" id="KDq-Oj-aHL" customClass="DrugCell" customModule="MedMiner" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb6-Hl-Afd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="9H5-Ut-X9i" userLabel="drugImage View" customClass="CircleImage" customModule="MedMiner" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="9H5-Ut-X9i" secondAttribute="height" id="XeE-7U-LxR"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-Jr-kFI">
+                                                            <rect key="frame" x="111.99999999999999" y="29.333333333333329" width="49.333333333333329" height="21.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-Pe-Je4">
+                                                            <rect key="frame" x="112" y="59" width="35" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="vqV-Pe-Je4" firstAttribute="leading" secondItem="9H5-Ut-X9i" secondAttribute="trailing" constant="20" id="BMe-U5-UWX"/>
+                                                        <constraint firstItem="9H5-Ut-X9i" firstAttribute="centerY" secondItem="vb6-Hl-Afd" secondAttribute="centerY" id="UCX-W6-Ps1"/>
+                                                        <constraint firstItem="yeM-Jr-kFI" firstAttribute="centerY" secondItem="vb6-Hl-Afd" secondAttribute="centerY" constant="-10" id="W4a-yW-PGl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9H5-Ut-X9i" secondAttribute="bottom" constant="8" id="af5-3H-N7D"/>
+                                                        <constraint firstItem="9H5-Ut-X9i" firstAttribute="leading" secondItem="vb6-Hl-Afd" secondAttribute="leading" constant="8" id="cO0-zb-io0"/>
+                                                        <constraint firstItem="9H5-Ut-X9i" firstAttribute="top" secondItem="vb6-Hl-Afd" secondAttribute="top" constant="8" id="rkV-9x-F1f"/>
+                                                        <constraint firstItem="vqV-Pe-Je4" firstAttribute="top" secondItem="yeM-Jr-kFI" secondAttribute="bottom" constant="8" symbolic="YES" id="uWf-Ag-bT7"/>
+                                                        <constraint firstItem="yeM-Jr-kFI" firstAttribute="leading" secondItem="9H5-Ut-X9i" secondAttribute="trailing" constant="20" id="xDD-dL-g6K"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vb6-Hl-Afd" secondAttribute="bottom" id="78Y-8q-DWV"/>
+                                                <constraint firstAttribute="trailing" secondItem="vb6-Hl-Afd" secondAttribute="trailing" id="E8w-L3-Jeg"/>
+                                                <constraint firstItem="vb6-Hl-Afd" firstAttribute="leading" secondItem="KDq-Oj-aHL" secondAttribute="leading" id="IJj-SG-18B"/>
+                                                <constraint firstItem="vb6-Hl-Afd" firstAttribute="top" secondItem="KDq-Oj-aHL" secondAttribute="top" id="ju3-mi-POi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="medDesc" destination="vqV-Pe-Je4" id="qs7-eU-VbF"/>
+                                            <outlet property="medImg" destination="9H5-Ut-X9i" id="enW-BJ-Ii5"/>
+                                            <outlet property="medName" destination="yeM-Jr-kFI" id="5jJ-oy-UOG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="DSCell" rowHeight="100" id="aSh-a9-Vvo" customClass="DrugStoreCell" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="155.33333206176758" width="388" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aSh-a9-Vvo" id="Bfc-SK-yyJ" customClass="DrugStoreCell" customModule="MedMiner" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG2-3o-O65">
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ds_5" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-0o-ODB" userLabel="drugImage View" customClass="RoundCurveImg" customModule="MedMiner" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="tT1-0o-ODB" secondAttribute="height" multiplier="1:1" id="DX2-Sa-YOr"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                                                                    <real key="value" value="30"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mug-Hl-ein">
+                                                            <rect key="frame" x="111.99999999999999" y="29.333333333333329" width="49.333333333333329" height="21.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utY-ft-3Do">
+                                                            <rect key="frame" x="112" y="59" width="35" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Mug-Hl-ein" firstAttribute="leading" secondItem="tT1-0o-ODB" secondAttribute="trailing" constant="20" id="Afs-gj-qWU"/>
+                                                        <constraint firstItem="utY-ft-3Do" firstAttribute="leading" secondItem="tT1-0o-ODB" secondAttribute="trailing" constant="20" id="GfZ-hS-Htq"/>
+                                                        <constraint firstItem="tT1-0o-ODB" firstAttribute="top" secondItem="YG2-3o-O65" secondAttribute="top" constant="8" id="ZRe-Ha-bkR"/>
+                                                        <constraint firstItem="tT1-0o-ODB" firstAttribute="leading" secondItem="YG2-3o-O65" secondAttribute="leading" constant="8" id="aPP-xw-c0O"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tT1-0o-ODB" secondAttribute="bottom" constant="8" id="apZ-NG-3Ah"/>
+                                                        <constraint firstItem="utY-ft-3Do" firstAttribute="top" secondItem="Mug-Hl-ein" secondAttribute="bottom" constant="8" id="fgv-iB-hAK"/>
+                                                        <constraint firstItem="tT1-0o-ODB" firstAttribute="centerY" secondItem="YG2-3o-O65" secondAttribute="centerY" id="hGp-QO-NsP"/>
+                                                        <constraint firstItem="Mug-Hl-ein" firstAttribute="centerY" secondItem="YG2-3o-O65" secondAttribute="centerY" constant="-10" id="n5h-Vn-vbv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YG2-3o-O65" secondAttribute="trailing" id="Kqs-KG-dQo"/>
+                                                <constraint firstAttribute="bottom" secondItem="YG2-3o-O65" secondAttribute="bottom" id="P0p-dh-9rl"/>
+                                                <constraint firstItem="YG2-3o-O65" firstAttribute="top" secondItem="Bfc-SK-yyJ" secondAttribute="top" id="eve-N7-kwm"/>
+                                                <constraint firstItem="YG2-3o-O65" firstAttribute="leading" secondItem="Bfc-SK-yyJ" secondAttribute="leading" id="z4v-Vf-ivm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="desc" destination="utY-ft-3Do" id="Vts-DZ-xbx"/>
+                                            <outlet property="img" destination="tT1-0o-ODB" id="Zii-TX-aMT"/>
+                                            <outlet property="name" destination="Mug-Hl-ein" id="DU5-x4-Aht"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-wz-VRH" customClass="RoundCurveView" customModule="MedMiner" customModuleProvider="target">
+                                <rect key="frame" x="20" y="784" width="388" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-mo-nr9">
+                                        <rect key="frame" x="355" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="1UC-lE-iNj"/>
+                                        </constraints>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dmc-XX-Wjf"/>
+                                        </connections>
+                                    </button>
+                                    <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="18" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="duI-wS-QcB">
+                                        <rect key="frame" x="41" y="0.0" width="306" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" smartQuotesType="yes"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jxj-4x-BA5"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ct6-mo-nr9" firstAttribute="top" secondItem="Iph-wz-VRH" secondAttribute="top" id="2gx-da-X8i"/>
+                                    <constraint firstAttribute="bottom" secondItem="duI-wS-QcB" secondAttribute="bottom" id="DGS-rz-kde"/>
+                                    <constraint firstItem="duI-wS-QcB" firstAttribute="leading" secondItem="Iph-wz-VRH" secondAttribute="leading" constant="41" id="My0-wm-Bfu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ct6-mo-nr9" secondAttribute="bottom" id="Te4-QX-d5W"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ct6-mo-nr9" secondAttribute="trailing" constant="8" id="aoO-uY-PIq"/>
+                                    <constraint firstAttribute="width" constant="388" id="pkB-fa-n3U"/>
+                                    <constraint firstItem="Ct6-mo-nr9" firstAttribute="leading" secondItem="duI-wS-QcB" secondAttribute="trailing" constant="8" symbolic="YES" id="qGZ-1T-UNf"/>
+                                    <constraint firstItem="duI-wS-QcB" firstAttribute="top" secondItem="Iph-wz-VRH" secondAttribute="top" id="rv1-Fc-hUr"/>
+                                    <constraint firstAttribute="height" constant="34" id="yum-9e-R8Y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="10" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iph-wz-VRH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="92S-Xc-6Rv"/>
+                            <constraint firstItem="CmE-Xz-SHk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D4x-7S-Mvx"/>
+                            <constraint firstAttribute="trailing" secondItem="Iph-wz-VRH" secondAttribute="trailing" constant="20" id="Dbi-yb-z4I"/>
+                            <constraint firstItem="CmE-Xz-SHk" firstAttribute="top" secondItem="77j-hF-L8a" secondAttribute="bottom" constant="15" id="THp-0V-K9E"/>
+                            <constraint firstItem="Iph-wz-VRH" firstAttribute="top" secondItem="CmE-Xz-SHk" secondAttribute="bottom" constant="8" symbolic="YES" id="YoA-w8-Mop"/>
+                            <constraint firstItem="CmE-Xz-SHk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="l5v-yO-nri"/>
+                            <constraint firstItem="77j-hF-L8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mgk-0a-r4a"/>
+                            <constraint firstItem="77j-hF-L8a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="nRu-Ln-6Ja"/>
+                            <constraint firstAttribute="bottom" secondItem="Iph-wz-VRH" secondAttribute="bottom" constant="20" symbolic="YES" id="t6o-UM-Q8q" customClass="KeyboardLayoutConstraint" customModule="MedMiner" customModuleProvider="target"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="dGe-a9-r2s"/>
+                    <connections>
+                        <outlet property="searchBtn" destination="Ct6-mo-nr9" id="cPo-mE-pgf"/>
+                        <outlet property="searchTableView" destination="CmE-Xz-SHk" id="s8J-E0-2Kf"/>
+                        <outlet property="searchTxtBox" destination="duI-wS-QcB" id="Y4b-f5-uRF"/>
+                        <outlet property="segmentControl" destination="77j-hF-L8a" id="nGI-i3-nEE"/>
+                        <segue destination="XDl-Fa-KdD" kind="show" identifier="ToDrugStore" id="7L8-Bj-Czd"/>
+                        <segue destination="q9T-qe-er1" kind="show" identifier="ToDrug" id="w6z-LV-B1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678.5046728971962" y="3.8876889848812097"/>
+        </scene>
+        <!--DrugStore-->
+        <scene sceneID="JHL-dv-nep">
+            <objects>
+                <viewController id="XDl-Fa-KdD" customClass="DrugStoreVC" customModule="MedMiner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fWa-v2-LVY">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ta-j7-Hqk">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="134"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ds_5" translatesAutoresizingMaskIntoConstraints="NO" id="M1V-td-y7i" userLabel="drugImage View" customClass="RoundCurveImg" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="9" width="116" height="116"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="n4y-ZJ-zTv"/>
+                                            <constraint firstAttribute="height" constant="116" id="oI0-re-WLp"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drugStore name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ND-Fh-cz2">
+                                        <rect key="frame" x="139" y="32" width="128.33333333333337" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvh-yp-64H">
+                                        <rect key="frame" x="139" y="59.999999999999993" width="48.333333333333343" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <color key="highlightedColor" systemColor="secondaryLabelColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="4ND-Fh-cz2" firstAttribute="centerY" secondItem="9ta-j7-Hqk" secondAttribute="centerY" constant="-25" id="BiK-ev-tn1"/>
+                                    <constraint firstAttribute="height" constant="134" id="Jzd-m7-34Y"/>
+                                    <constraint firstItem="M1V-td-y7i" firstAttribute="top" secondItem="9ta-j7-Hqk" secondAttribute="top" constant="9" id="TSd-KK-OMc"/>
+                                    <constraint firstItem="Qvh-yp-64H" firstAttribute="top" secondItem="4ND-Fh-cz2" secondAttribute="bottom" constant="8" id="ZF3-E9-t9Q"/>
+                                    <constraint firstItem="Qvh-yp-64H" firstAttribute="leading" secondItem="M1V-td-y7i" secondAttribute="trailing" constant="8" symbolic="YES" id="eZ6-Nw-cTg"/>
+                                    <constraint firstItem="4ND-Fh-cz2" firstAttribute="leading" secondItem="M1V-td-y7i" secondAttribute="trailing" constant="8" symbolic="YES" id="eoK-AD-pBt"/>
+                                    <constraint firstItem="M1V-td-y7i" firstAttribute="leading" secondItem="9ta-j7-Hqk" secondAttribute="leading" constant="15" id="gE3-he-z9c"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="19" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72u-Cn-Xvz">
+                                <rect key="frame" x="0.0" y="142" width="428" height="634"/>
+                                <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drugsInStore" id="bKs-pO-lfe" customClass="DrugsInStoreCell" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="388" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bKs-pO-lfe" id="d7J-H1-xoR" customClass="DrugsInStoreCell" customModule="MedMiner" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="QAz-hs-Zn9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZV-Lp-UGm">
+                                                            <rect key="frame" x="111.99999999999999" y="29.333333333333329" width="49.333333333333329" height="21.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="F00-W2-GMO" userLabel="drugImage View" customClass="CircleImage" customModule="MedMiner" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="F00-W2-GMO" secondAttribute="height" multiplier="1:1" id="NKh-eP-JrQ"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-8t-682">
+                                                            <rect key="frame" x="112" y="59.000000000000007" width="37" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="xsB-8t-682" firstAttribute="leading" secondItem="F00-W2-GMO" secondAttribute="trailing" constant="20" id="JCB-3a-6Tx"/>
+                                                        <constraint firstItem="xsB-8t-682" firstAttribute="top" secondItem="dZV-Lp-UGm" secondAttribute="bottom" constant="8" id="JJA-wI-ayU"/>
+                                                        <constraint firstItem="dZV-Lp-UGm" firstAttribute="centerY" secondItem="QAz-hs-Zn9" secondAttribute="centerY" constant="-10" id="Pzt-A0-8nj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="F00-W2-GMO" secondAttribute="bottom" constant="8" id="Ylu-7t-Tfe"/>
+                                                        <constraint firstItem="F00-W2-GMO" firstAttribute="leading" secondItem="QAz-hs-Zn9" secondAttribute="leading" constant="8" id="mCm-Kb-dex"/>
+                                                        <constraint firstItem="dZV-Lp-UGm" firstAttribute="leading" secondItem="F00-W2-GMO" secondAttribute="trailing" constant="20" id="olm-0E-mUb"/>
+                                                        <constraint firstItem="F00-W2-GMO" firstAttribute="centerY" secondItem="QAz-hs-Zn9" secondAttribute="centerY" id="rg3-85-xw1"/>
+                                                        <constraint firstItem="F00-W2-GMO" firstAttribute="top" secondItem="QAz-hs-Zn9" secondAttribute="top" constant="8" id="vpm-Md-iEm"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QAz-hs-Zn9" firstAttribute="leading" secondItem="d7J-H1-xoR" secondAttribute="leading" id="Dk2-UI-5Nk"/>
+                                                <constraint firstItem="QAz-hs-Zn9" firstAttribute="top" secondItem="d7J-H1-xoR" secondAttribute="top" id="R9Y-jO-wUI"/>
+                                                <constraint firstAttribute="bottom" secondItem="QAz-hs-Zn9" secondAttribute="bottom" id="jR8-zq-wLw"/>
+                                                <constraint firstAttribute="trailing" secondItem="QAz-hs-Zn9" secondAttribute="trailing" id="pZR-CT-tJz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="desc" destination="xsB-8t-682" id="xvw-MU-AiY"/>
+                                            <outlet property="img" destination="F00-W2-GMO" id="Ey2-a2-2cT"/>
+                                            <outlet property="name" destination="dZV-Lp-UGm" id="f5L-oQ-a7l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqV-On-3oL" customClass="RoundCurveView" customModule="MedMiner" customModuleProvider="target">
+                                <rect key="frame" x="20" y="784" width="388" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRO-FM-UMI">
+                                        <rect key="frame" x="355" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="kdG-nv-wDw"/>
+                                        </constraints>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchBtnPressed:" destination="XDl-Fa-KdD" eventType="touchUpInside" id="rBU-Wb-UJe"/>
+                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMd-td-9F5"/>
+                                        </connections>
+                                    </button>
+                                    <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="18" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lhj-hg-7So" userLabel="Search">
+                                        <rect key="frame" x="41" y="0.0" width="306" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" smartQuotesType="yes"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lhj-hg-7So" firstAttribute="top" secondItem="MqV-On-3oL" secondAttribute="top" id="Cc4-KI-lTc"/>
+                                    <constraint firstAttribute="height" constant="34" id="KaG-cE-T9e"/>
+                                    <constraint firstAttribute="trailing" secondItem="DRO-FM-UMI" secondAttribute="trailing" constant="8" id="OHe-Sq-gpI"/>
+                                    <constraint firstItem="lhj-hg-7So" firstAttribute="leading" secondItem="MqV-On-3oL" secondAttribute="leading" constant="41" id="PX1-gd-uhw"/>
+                                    <constraint firstAttribute="bottom" secondItem="lhj-hg-7So" secondAttribute="bottom" id="ZtU-qn-QBC"/>
+                                    <constraint firstItem="DRO-FM-UMI" firstAttribute="leading" secondItem="lhj-hg-7So" secondAttribute="trailing" constant="8" symbolic="YES" id="afe-d1-Blz"/>
+                                    <constraint firstAttribute="bottom" secondItem="DRO-FM-UMI" secondAttribute="bottom" id="dBo-gE-pAZ"/>
+                                    <constraint firstItem="DRO-FM-UMI" firstAttribute="top" secondItem="MqV-On-3oL" secondAttribute="top" id="k0V-EE-YAP"/>
+                                    <constraint firstAttribute="width" constant="388" id="qCl-2c-iDc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="10" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A94-C1-aXf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="72u-Cn-Xvz" firstAttribute="top" secondItem="9ta-j7-Hqk" secondAttribute="bottom" constant="8" symbolic="YES" id="1JD-u8-U2u"/>
+                            <constraint firstItem="MqV-On-3oL" firstAttribute="top" secondItem="72u-Cn-Xvz" secondAttribute="bottom" constant="8" symbolic="YES" id="4CC-uj-dLC"/>
+                            <constraint firstAttribute="trailing" secondItem="72u-Cn-Xvz" secondAttribute="trailing" id="4SX-Bt-iRi"/>
+                            <constraint firstItem="9ta-j7-Hqk" firstAttribute="trailing" secondItem="A94-C1-aXf" secondAttribute="trailing" id="QFN-SF-fIj"/>
+                            <constraint firstItem="MqV-On-3oL" firstAttribute="leading" secondItem="A94-C1-aXf" secondAttribute="leading" constant="20" id="UMO-nf-5mR"/>
+                            <constraint firstItem="9ta-j7-Hqk" firstAttribute="top" secondItem="A94-C1-aXf" secondAttribute="top" id="bwm-zx-WfE"/>
+                            <constraint firstItem="9ta-j7-Hqk" firstAttribute="leading" secondItem="A94-C1-aXf" secondAttribute="leading" id="jWM-wV-Zc8"/>
+                            <constraint firstAttribute="bottom" secondItem="MqV-On-3oL" secondAttribute="bottom" constant="20" symbolic="YES" id="meT-Tu-OTH" customClass="KeyboardLayoutConstraint" customModule="MedMiner" customModuleProvider="target"/>
+                            <constraint firstItem="A94-C1-aXf" firstAttribute="trailing" secondItem="MqV-On-3oL" secondAttribute="trailing" constant="20" id="v4v-k0-rZy"/>
+                            <constraint firstItem="72u-Cn-Xvz" firstAttribute="leading" secondItem="fWa-v2-LVY" secondAttribute="leading" id="z4H-8t-E9i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DrugStore" id="dfE-3P-Txm"/>
+                    <connections>
+                        <outlet property="dSAddrss" destination="Qvh-yp-64H" id="uVg-M1-8xA"/>
+                        <outlet property="dSImg" destination="M1V-td-y7i" id="7kQ-sX-aT9"/>
+                        <outlet property="dSName" destination="4ND-Fh-cz2" id="XRM-Dd-gnU"/>
+                        <outlet property="searchBtn" destination="DRO-FM-UMI" id="cFL-AJ-Sef"/>
+                        <outlet property="searchTableView" destination="72u-Cn-Xvz" id="Swx-lI-6do"/>
+                        <outlet property="searchTxtBox" destination="lhj-hg-7So" id="Tcp-7X-d7B"/>
+                        <segue destination="9TX-av-XOw" kind="show" identifier="ToDrugInfo" id="RLG-bq-lvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDZ-Xd-K6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2193.9252336448599" y="-400.43196544276464"/>
+        </scene>
+        <!--DrugInfo-->
+        <scene sceneID="saU-g9-qLm">
+            <objects>
+                <viewController id="9TX-av-XOw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4xO-v2-fqq">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-ze-lxB">
+                                <rect key="frame" x="0.0" y="20" width="428" height="747.33333333333337"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="adH-Vi-lQI" userLabel="drugImage View" customClass="CircleImage" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="170.66666666666666" y="0.0" width="86.999999999999972" height="87"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DrugName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEa-qT-qJ8">
+                                        <rect key="frame" x="173" y="107" width="82.333333333333314" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XsL-TC-6Kk">
+                                        <rect key="frame" x="20" y="147.33333333333337" width="388" height="600"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="600" id="mWF-zr-iCE"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XsL-TC-6Kk" firstAttribute="leading" secondItem="fuq-ze-lxB" secondAttribute="leading" constant="20" symbolic="YES" id="HHH-RL-vS0"/>
+                                    <constraint firstAttribute="trailing" secondItem="XsL-TC-6Kk" secondAttribute="trailing" constant="20" symbolic="YES" id="kWV-F6-sTL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pvI-5A-y4K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fuq-ze-lxB" firstAttribute="top" secondItem="pvI-5A-y4K" secondAttribute="top" constant="20" id="GgA-Pt-1ml"/>
+                            <constraint firstItem="fuq-ze-lxB" firstAttribute="leading" secondItem="pvI-5A-y4K" secondAttribute="leading" id="JCl-Wx-OH0"/>
+                            <constraint firstItem="pvI-5A-y4K" firstAttribute="trailing" secondItem="fuq-ze-lxB" secondAttribute="trailing" id="daT-xg-xxQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DrugInfo" id="8mH-Yz-Yv0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCB-Iq-E22" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3747" y="4"/>
+        </scene>
+        <!--Drug-->
+        <scene sceneID="FT4-t0-Yhd">
+            <objects>
+                <viewController id="q9T-qe-er1" customClass="DrugVC" customModule="MedMiner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qZ5-Y2-3cb">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXm-8T-P29">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="134"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-59-2Lw" userLabel="drugImage View" customClass="CircleImage" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="9" width="116" height="116"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="116" id="sGS-TK-vXW"/>
+                                            <constraint firstAttribute="width" constant="116" id="wQm-15-ivX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuR-lk-uZc">
+                                        <rect key="frame" x="139" y="57.000000000000007" width="89.666666666666686" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="LtY-O0-Nbm"/>
+                                    <constraint firstItem="cXt-59-2Lw" firstAttribute="leading" secondItem="xXm-8T-P29" secondAttribute="leading" constant="15" id="N6E-16-A0a"/>
+                                    <constraint firstItem="cXt-59-2Lw" firstAttribute="centerY" secondItem="xXm-8T-P29" secondAttribute="centerY" id="Xp6-hg-Hyd"/>
+                                    <constraint firstItem="zuR-lk-uZc" firstAttribute="leading" secondItem="cXt-59-2Lw" secondAttribute="trailing" constant="8" symbolic="YES" id="YNE-KL-GqD"/>
+                                    <constraint firstItem="zuR-lk-uZc" firstAttribute="centerY" secondItem="cXt-59-2Lw" secondAttribute="centerY" id="rkl-eh-KtT"/>
+                                    <constraint firstItem="cXt-59-2Lw" firstAttribute="top" secondItem="xXm-8T-P29" secondAttribute="top" constant="9" id="upM-eX-c6l"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JH3-vw-OG8" customClass="RoundCurveView" customModule="MedMiner" customModuleProvider="target">
+                                <rect key="frame" x="20" y="784" width="388" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZw-Lt-uMv">
+                                        <rect key="frame" x="355" y="0.0" width="25" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="FKn-V8-nP7"/>
+                                        </constraints>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="seachBtnPressed:" destination="q9T-qe-er1" eventType="touchUpInside" id="1zn-71-jMq"/>
+                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Nu-tA-kzL"/>
+                                        </connections>
+                                    </button>
+                                    <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search " textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="18" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="eai-NR-arF">
+                                        <rect key="frame" x="41" y="0.0" width="306" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" smartQuotesType="yes"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eai-NR-arF" firstAttribute="leading" secondItem="JH3-vw-OG8" secondAttribute="leading" constant="41" id="8Y4-pf-Dke"/>
+                                    <constraint firstItem="eai-NR-arF" firstAttribute="top" secondItem="JH3-vw-OG8" secondAttribute="top" id="8hd-TI-ii1"/>
+                                    <constraint firstItem="JZw-Lt-uMv" firstAttribute="leading" secondItem="eai-NR-arF" secondAttribute="trailing" constant="8" symbolic="YES" id="DUm-hI-jvR"/>
+                                    <constraint firstAttribute="trailing" secondItem="JZw-Lt-uMv" secondAttribute="trailing" constant="8" id="UBc-Ou-i0K"/>
+                                    <constraint firstItem="JZw-Lt-uMv" firstAttribute="top" secondItem="JH3-vw-OG8" secondAttribute="top" id="V4Z-z3-Nye"/>
+                                    <constraint firstAttribute="bottom" secondItem="JZw-Lt-uMv" secondAttribute="bottom" id="dS8-rw-btX"/>
+                                    <constraint firstAttribute="bottom" secondItem="eai-NR-arF" secondAttribute="bottom" id="fcZ-Xh-eUk"/>
+                                    <constraint firstAttribute="width" constant="388" id="pgw-dU-iDK"/>
+                                    <constraint firstAttribute="height" constant="34" id="thf-eb-hIT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="10" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="19" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="THf-Lv-ipd">
+                                <rect key="frame" x="0.0" y="140" width="428" height="636"/>
+                                <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="storeWithDrugCell" id="Mf5-Wp-Bh5" customClass="StoreWithDrugCell" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="388" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mf5-Wp-Bh5" id="G1p-yp-Vtm" customClass="StoreWithDrugCell" customModule="MedMiner" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-ry-lCf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ds_5" translatesAutoresizingMaskIntoConstraints="NO" id="FdY-yr-2bd" userLabel="drugImage View" customClass="RoundCurveImg" customModule="MedMiner" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="FdY-yr-2bd" secondAttribute="height" multiplier="1:1" id="54n-1n-rzf"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                                                                    <real key="value" value="30"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfM-PP-v5N">
+                                                            <rect key="frame" x="112" y="30" width="45" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJr-Nf-pL6">
+                                                            <rect key="frame" x="112" y="58.333333333333336" width="39" height="20.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="SfM-PP-v5N" firstAttribute="centerY" secondItem="eM7-ry-lCf" secondAttribute="centerY" constant="-10" id="Bw1-Hr-9Oa"/>
+                                                        <constraint firstItem="FdY-yr-2bd" firstAttribute="leading" secondItem="eM7-ry-lCf" secondAttribute="leading" constant="8" id="JeC-lv-OIt"/>
+                                                        <constraint firstItem="SfM-PP-v5N" firstAttribute="leading" secondItem="FdY-yr-2bd" secondAttribute="trailing" constant="20" id="ZrJ-dG-CWg"/>
+                                                        <constraint firstItem="BJr-Nf-pL6" firstAttribute="leading" secondItem="FdY-yr-2bd" secondAttribute="trailing" constant="20" id="ki0-Yh-72W"/>
+                                                        <constraint firstItem="FdY-yr-2bd" firstAttribute="top" secondItem="eM7-ry-lCf" secondAttribute="top" constant="8" id="tBl-Ts-Bux"/>
+                                                        <constraint firstItem="BJr-Nf-pL6" firstAttribute="top" secondItem="SfM-PP-v5N" secondAttribute="bottom" constant="8" id="vXJ-Y4-tht"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FdY-yr-2bd" secondAttribute="bottom" constant="8" id="zM1-15-XWQ"/>
+                                                    </constraints>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eM7-ry-lCf" firstAttribute="leading" secondItem="G1p-yp-Vtm" secondAttribute="leading" id="SD5-e9-tRb"/>
+                                                <constraint firstAttribute="bottom" secondItem="eM7-ry-lCf" secondAttribute="bottom" id="guF-eH-rZJ"/>
+                                                <constraint firstItem="eM7-ry-lCf" firstAttribute="top" secondItem="G1p-yp-Vtm" secondAttribute="top" id="hZY-w6-o30"/>
+                                                <constraint firstAttribute="trailing" secondItem="eM7-ry-lCf" secondAttribute="trailing" id="tn6-p9-Kvl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="desc" destination="BJr-Nf-pL6" id="9iH-g2-i03"/>
+                                            <outlet property="img" destination="FdY-yr-2bd" id="KSs-sa-GvY"/>
+                                            <outlet property="name" destination="SfM-PP-v5N" id="ZY3-FP-ge2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3vx-kZ-6bL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3vx-kZ-6bL" firstAttribute="trailing" secondItem="xXm-8T-P29" secondAttribute="trailing" id="0sH-8g-gSh"/>
+                            <constraint firstAttribute="trailing" secondItem="THf-Lv-ipd" secondAttribute="trailing" id="DHL-pu-U84"/>
+                            <constraint firstItem="THf-Lv-ipd" firstAttribute="leading" secondItem="qZ5-Y2-3cb" secondAttribute="leading" id="Lmr-uz-aLu"/>
+                            <constraint firstItem="3vx-kZ-6bL" firstAttribute="trailing" secondItem="JH3-vw-OG8" secondAttribute="trailing" constant="20" id="WYB-T7-63c"/>
+                            <constraint firstItem="JH3-vw-OG8" firstAttribute="leading" secondItem="3vx-kZ-6bL" secondAttribute="leading" constant="20" id="Ycj-nq-cmV"/>
+                            <constraint firstItem="THf-Lv-ipd" firstAttribute="top" secondItem="xXm-8T-P29" secondAttribute="bottom" constant="6" id="bTg-xb-OQR"/>
+                            <constraint firstItem="xXm-8T-P29" firstAttribute="leading" secondItem="3vx-kZ-6bL" secondAttribute="leading" id="jSZ-dp-71u"/>
+                            <constraint firstItem="JH3-vw-OG8" firstAttribute="top" secondItem="THf-Lv-ipd" secondAttribute="bottom" constant="8" id="nmm-RD-Nm4"/>
+                            <constraint firstItem="xXm-8T-P29" firstAttribute="top" secondItem="3vx-kZ-6bL" secondAttribute="top" id="peW-7x-puG"/>
+                            <constraint firstAttribute="bottom" secondItem="JH3-vw-OG8" secondAttribute="bottom" constant="20" symbolic="YES" id="rFc-2o-Fjb" customClass="KeyboardLayoutConstraint" customModule="MedMiner" customModuleProvider="target"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drug" id="ogt-38-OW6"/>
+                    <connections>
+                        <outlet property="drugImg" destination="cXt-59-2Lw" id="hcr-qG-3Xc"/>
+                        <outlet property="drugName" destination="zuR-lk-uZc" id="GkF-B1-QQP"/>
+                        <outlet property="searchBtn" destination="JZw-Lt-uMv" id="y0t-ap-Ile"/>
+                        <outlet property="searchTableView" destination="THf-Lv-ipd" id="Kj4-Tm-Nwj"/>
+                        <outlet property="searchTxtBox" destination="eai-NR-arF" id="t0o-aA-C7Q"/>
+                        <segue destination="9TX-av-XOw" kind="show" identifier="ToDrugInfo" id="C7c-nG-5Sb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YxC-SM-Yve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2193.9252336448599" y="395.89632829373653"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bQH-0g-8u0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kvv-xS-kOg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yWE-Vp-gzE">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemYellowColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ooi-xB-MH9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fH3-Ip-KR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="4"/>
+        </scene>
+        <!--User MenuVC-->
+        <scene sceneID="gMd-bd-hum">
+            <objects>
+                <viewController id="Ked-LA-oBt" customClass="UserMenuVC" customModule="MedMiner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lYh-Qa-bV7">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcE-FX-bG4">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMC-QM-7WY" customClass="CircleImage" customModule="MedMiner" customModuleProvider="target">
+                                        <rect key="frame" x="303" y="51.000000000000007" width="100" height="98.666666666666671"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ISl-LN-ycg"/>
+                                            <constraint firstAttribute="height" constant="100" id="PfT-sE-vF9"/>
+                                        </constraints>
+                                        <imageReference key="image" image="person.circle.fill" catalog="system" renderingMode="original"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aMC-QM-7WY" firstAttribute="top" secondItem="xcE-FX-bG4" secondAttribute="top" constant="50" id="j4B-vc-nGT"/>
+                                    <constraint firstAttribute="trailing" secondItem="aMC-QM-7WY" secondAttribute="trailing" constant="25" id="nme-Ai-ZD2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fu9-Rr-UQY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xcE-FX-bG4" secondAttribute="bottom" id="77x-d9-wuN"/>
+                            <constraint firstItem="xcE-FX-bG4" firstAttribute="top" secondItem="lYh-Qa-bV7" secondAttribute="top" id="9Ej-0V-oOk"/>
+                            <constraint firstAttribute="trailing" secondItem="xcE-FX-bG4" secondAttribute="trailing" id="VXW-R6-O2S"/>
+                            <constraint firstItem="xcE-FX-bG4" firstAttribute="leading" secondItem="lYh-Qa-bV7" secondAttribute="leading" id="p6y-aj-CBg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tg2-bk-GaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311.21495327102804" y="1307.5593952483803"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1YG-Zd-Ta1">
+            <objects>
+                <viewController id="Z20-uq-pe4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Wb-5J-hD7">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8Cc-UI-oFN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRH-sL-cFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="1308"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="215-Fu-d6x">
+            <objects>
+                <viewController id="byt-Ke-9N0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PUy-wh-9No">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CrX-eW-Oye"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Uc-4a-UqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2194" y="1308"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="ckB-W1-1Ci">
+            <objects>
+                <viewController id="v61-qd-BfO" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1v-gr-ako">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FgN-6Z-yLO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="kvv-xS-kOg" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="yKd-ZA-wfV"/>
+                        <segue destination="Ked-LA-oBt" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="8zS-F6-iWj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaZ-ud-jd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1747" y="816"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="9H5-Ut-X9i">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+        <designable name="F00-W2-GMO">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+        <designable name="FdY-yr-2bd">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+        <designable name="M1V-td-y7i">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+        <designable name="aMC-QM-7WY">
+            <size key="intrinsicContentSize" width="19.666666666666664" height="20.333333333333332"/>
+        </designable>
+        <designable name="adH-Vi-lQI">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+        <designable name="cXt-59-2Lw">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+        <designable name="tT1-0o-ODB">
+            <size key="intrinsicContentSize" width="87" height="87"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="RLG-bq-lvF"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="1" width="87" height="87"/>
+        <image name="ds_5" width="87" height="87"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
