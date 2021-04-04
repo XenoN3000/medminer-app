@@ -65,7 +65,7 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        var success = search()
+        let success = search()
         view.endEditing(success)
         return success
         
@@ -152,6 +152,9 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let drugInfoVC = segue.destination as? DrugInfoVC {
+            
+            navigatinBackBarButtonConfig()
+            
             assert(sender as? DrugInfoVC != nil)
             drugInfoVC.initInfo(sender as! DrugstoreHasDrugs)
         }

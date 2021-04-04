@@ -15,6 +15,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 let TO_DRUG_STORE = "ToDrugStore"
 let TO_DRUG = "ToDrug"
 let TO_DRUG_INFO = "ToDrugInfo"
+let UNWIND_TO_USER_MENU = "unwindToUserMenu"
 
 
 
@@ -36,5 +37,5 @@ let HEADER = [
     "Content-type":"application/json; charset=utf-8"
 ]
 
-
-let color = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+//colors
+let navigationItemColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)

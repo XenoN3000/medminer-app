@@ -64,6 +64,8 @@ class RoundCurveView: UIView {
     
     override func layoutSubviews() {
         
+        super.layoutSubviews()
+        
         self.layer.cornerRadius = curveRaidus
         self.layer.shadowColor = shadowColor.cgColor
         self.layer.shadowOpacity = shadowOpacity

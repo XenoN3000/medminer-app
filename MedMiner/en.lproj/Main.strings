@@ -1,0 +1,144 @@
+
+/* Class = "UIButton"; normalTitle = "LogIn"; ObjectID = "0WB-Og-Pqc"; */
+"0WB-Og-Pqc.normalTitle" = "LogIn";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "14e-mj-2xF"; */
+"14e-mj-2xF.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Create Acount"; ObjectID = "2M3-x2-k6h"; */
+"2M3-x2-k6h.normalTitle" = "Create Acount";
+
+/* Class = "UILabel"; text = "drugStore name"; ObjectID = "4ND-Fh-cz2"; */
+"4ND-Fh-cz2.text" = "drugStore name";
+
+/* Class = "UILabel"; text = "Count"; ObjectID = "6Xa-fJ-MhH"; */
+"6Xa-fJ-MhH.text" = "Count";
+
+/* Class = "UISegmentedControl"; 77j-hF-L8a.segmentTitles[0] = "drug"; ObjectID = "77j-hF-L8a"; */
+"77j-hF-L8a.segmentTitles[0]" = "drug";
+
+/* Class = "UISegmentedControl"; 77j-hF-L8a.segmentTitles[1] = "drugStore"; ObjectID = "77j-hF-L8a"; */
+"77j-hF-L8a.segmentTitles[1]" = "drugStore";
+
+/* Class = "UINavigationItem"; title = "DrugInfo"; ObjectID = "8mH-Yz-Yv0"; */
+"8mH-Yz-Yv0.title" = "DrugInfo";
+
+/* Class = "UITextField"; placeholder = "Email Or PhoneNumber"; ObjectID = "9T6-fr-Uqv"; */
+"9T6-fr-Uqv.placeholder" = "Email Or PhoneNumber";
+
+/* Class = "UILabel"; text = "Desc"; ObjectID = "BJr-Nf-pL6"; */
+"BJr-Nf-pL6.text" = "Desc";
+
+/* Class = "UIButton"; normalTitle = "To Pay"; ObjectID = "FxP-e0-QKp"; */
+"FxP-e0-QKp.normalTitle" = "To Pay";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "GT3-d9-Mfj"; */
+"GT3-d9-Mfj.text" = "Name";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "IAW-bQ-UUH"; */
+"IAW-bQ-UUH.text" = "Price";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Mug-Hl-ein"; */
+"Mug-Hl-ein.text" = "Name";
+
+/* Class = "UILabel"; text = "medicine  Usage"; ObjectID = "OWm-47-KO4"; */
+"OWm-47-KO4.text" = "medicine  Usage";
+
+/* Class = "UILabel"; text = "address"; ObjectID = "Qvh-yp-64H"; */
+"Qvh-yp-64H.text" = "address";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "SfM-PP-v5N"; */
+"SfM-PP-v5N.text" = "Name";
+
+/* Class = "UILabel"; text = "tracked medicine"; ObjectID = "TYe-v7-4vI"; */
+"TYe-v7-4vI.text" = "tracked medicine";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "XsL-TC-6Kk"; */
+"XsL-TC-6Kk.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Count"; ObjectID = "YQb-mz-eG5"; */
+"YQb-mz-eG5.text" = "Count";
+
+/* Class = "UILabel"; text = "Count"; ObjectID = "Yin-o9-hKb"; */
+"Yin-o9-hKb.text" = "Count";
+
+/* Class = "UIButton"; normalTitle = "Don't Have An Acount? SingUp Here"; ObjectID = "c7J-0D-vhX"; */
+"c7J-0D-vhX.normalTitle" = "Don't Have An Acount? SingUp Here";
+
+/* Class = "UINavigationItem"; title = "Create An Account"; ObjectID = "cws-ey-W36"; */
+"cws-ey-W36.title" = "Create An Account";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "dGe-a9-r2s"; */
+"dGe-a9-r2s.title" = "Search";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "dZV-Lp-UGm"; */
+"dZV-Lp-UGm.text" = "Name";
+
+/* Class = "UINavigationItem"; title = "DrugStore"; ObjectID = "dfE-3P-Txm"; */
+"dfE-3P-Txm.title" = "DrugStore";
+
+/* Class = "UITextField"; placeholder = "Search "; ObjectID = "duI-wS-QcB"; */
+"duI-wS-QcB.placeholder" = "Search ";
+
+/* Class = "UITextField"; placeholder = "Search "; ObjectID = "eai-NR-arF"; */
+"eai-NR-arF.placeholder" = "Search ";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "h7O-8f-9Xb"; */
+"h7O-8f-9Xb.text" = "Price";
+
+/* Class = "UIButton"; normalTitle = "LogOut"; ObjectID = "hGW-zn-pOJ"; */
+"hGW-zn-pOJ.normalTitle" = "LogOut";
+
+/* Class = "UITextField"; placeholder = "UserName Or PhoneNumber "; ObjectID = "jLh-ep-HP3"; */
+"jLh-ep-HP3.placeholder" = "UserName Or PhoneNumber ";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "jbL-gd-FmQ"; */
+"jbL-gd-FmQ.text" = "Price";
+
+/* Class = "UITextField"; placeholder = "UserName"; ObjectID = "k83-aq-6u7"; */
+"k83-aq-6u7.placeholder" = "UserName";
+
+/* Class = "UITextField"; placeholder = "Search "; ObjectID = "lhj-hg-7So"; */
+"lhj-hg-7So.placeholder" = "Search ";
+
+/* Class = "UINavigationItem"; title = "LogIn"; ObjectID = "mhE-fy-xao"; */
+"mhE-fy-xao.title" = "LogIn";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "o4Q-kf-Dkt"; */
+"o4Q-kf-Dkt.placeholder" = "Address";
+
+/* Class = "UINavigationItem"; title = "Drug"; ObjectID = "ogt-38-OW6"; */
+"ogt-38-OW6.title" = "Drug";
+
+/* Class = "UILabel"; text = "DrugName"; ObjectID = "sEa-qT-qJ8"; */
+"sEa-qT-qJ8.text" = "DrugName";
+
+/* Class = "UIButton"; normalTitle = "LogIn"; ObjectID = "soO-Pa-ngK"; */
+"soO-Pa-ngK.normalTitle" = "LogIn";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "t1d-pg-hrx"; */
+"t1d-pg-hrx.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "PassWord "; ObjectID = "tFc-Ey-r9q"; */
+"tFc-Ey-r9q.placeholder" = "PassWord ";
+
+/* Class = "UILabel"; text = "Desc"; ObjectID = "utY-ft-3Do"; */
+"utY-ft-3Do.text" = "Desc";
+
+/* Class = "UILabel"; text = "Desc"; ObjectID = "vqV-Pe-Je4"; */
+"vqV-Pe-Je4.text" = "Desc";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "wls-aT-W0Z"; */
+"wls-aT-W0Z.text" = "Name";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "xIV-rb-lu4"; */
+"xIV-rb-lu4.text" = "Cart";
+
+/* Class = "UILabel"; text = "Desc"; ObjectID = "xsB-8t-682"; */
+"xsB-8t-682.text" = "Desc";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "yeM-Jr-kFI"; */
+"yeM-Jr-kFI.text" = "Name";
+
+/* Class = "UILabel"; text = "Drug Name"; ObjectID = "zuR-lk-uZc"; */
+"zuR-lk-uZc.text" = "Drug Name";

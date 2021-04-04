@@ -48,6 +48,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         // Do any additional setup after loading the view.
     }
     
+    
     //UIGestureRecognizer Delegation
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
 
@@ -107,10 +108,12 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
         if let drugStoreVC = segue.destination as? DrugStoreVC {
 
+            navigatinBackBarButtonConfig()
             assert(sender as? DrugStore != nil)
             drugStoreVC.initDrugStore(drugStore: sender as! DrugStore)
         }else if let drugVC = segue.destination as? DrugVC {
-
+            
+            navigatinBackBarButtonConfig()
             assert(sender as? Drug != nil)
             drugVC.initDrug(drug: sender as! Drug)
         }

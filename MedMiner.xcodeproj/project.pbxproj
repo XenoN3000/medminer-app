@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06597F2902A0C3DDA2A73555 /* Pods_MedMinerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F2604454AAB7D713279EC2 /* Pods_MedMinerTests.framework */; };
 		120C1F0425FF8A8C00549C0E /* HandleTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C1F0325FF8A8C00549C0E /* HandleTapView.swift */; };
+		120D8133261A1B0F00A0AF6B /* RoundCurveBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D8132261A1B0F00A0AF6B /* RoundCurveBtnView.swift */; };
 		1219489E25EE479600D7FFE7 /* DrugstoreHasDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */; };
 		1233425C25E287C20053FEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233425B25E287C20053FEAF /* AppDelegate.swift */; };
 		1233425E25E287C20053FEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233425D25E287C20053FEAF /* SceneDelegate.swift */; };
@@ -36,6 +37,8 @@
 		12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604E426014E5C00961A54 /* DrugInfoVC.swift */; };
 		12C403FA25FB732A00311E73 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C403F925FB732A00311E73 /* SWRevealViewController.m */; };
 		12C403FF25FB89A200311E73 /* UserMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C403FE25FB89A200311E73 /* UserMenuVC.swift */; };
+		12CC60FD260C746F006D19C8 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC60FC260C746F006D19C8 /* LogInVC.swift */; };
+		12CC6102260CA209006D19C8 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC6101260CA209006D19C8 /* CreateAccountVC.swift */; };
 		12FC2B02260267560015DD7E /* DrugsInStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */; };
 		12FE4B2C25FCFB7A003861FD /* DrugStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FE4B2B25FCFB7A003861FD /* DrugStoreVC.swift */; };
 		59EF3AAA827ACAD6AD5D3904 /* Pods_MedMinerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EC1CAA1D9C8A19204F56A8 /* Pods_MedMinerUITests.framework */; };
@@ -61,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		120C1F0325FF8A8C00549C0E /* HandleTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTapView.swift; sourceTree = "<group>"; };
+		120D8132261A1B0F00A0AF6B /* RoundCurveBtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCurveBtnView.swift; sourceTree = "<group>"; };
 		1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugstoreHasDrugs.swift; sourceTree = "<group>"; };
 		1233425825E287C20053FEAF /* MedMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1233425B25E287C20053FEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		12C403F825FB732A00311E73 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		12C403F925FB732A00311E73 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		12C403FE25FB89A200311E73 /* UserMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuVC.swift; sourceTree = "<group>"; };
+		12CC60FC260C746F006D19C8 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		12CC6101260CA209006D19C8 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsInStoreCell.swift; sourceTree = "<group>"; };
 		12FE4B2B25FCFB7A003861FD /* DrugStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugStoreVC.swift; sourceTree = "<group>"; };
 		44F842CEFE0407DC00EC0CB4 /* Pods-MedMinerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedMinerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedMinerUITests/Pods-MedMinerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 				42736C25EF44A2540F74C924 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		1233425925E287C20053FEAF /* Products */ = {
 			isa = PBXGroup;
@@ -218,6 +225,7 @@
 				1277318326009CD900F5CB30 /* RoundCurveImg.swift */,
 				12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */,
 				12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */,
+				120D8132261A1B0F00A0AF6B /* RoundCurveBtnView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +256,8 @@
 				12FE4B2B25FCFB7A003861FD /* DrugStoreVC.swift */,
 				127731882600BC2E00F5CB30 /* DrugVC.swift */,
 				12B604E426014E5C00961A54 /* DrugInfoVC.swift */,
+				12CC60FC260C746F006D19C8 /* LogInVC.swift */,
+				12CC6101260CA209006D19C8 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,11 +379,9 @@
 					};
 					1233426D25E287C40053FEAF = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 1233425725E287C20053FEAF;
 					};
 					1233427825E287C40053FEAF = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 1233425725E287C20053FEAF;
 					};
 				};
 			};
@@ -514,6 +522,7 @@
 				1233429B25E288D70053FEAF /* SearchService.swift in Sources */,
 				1259058325FF2BC7003579A7 /* RoundCurveView.swift in Sources */,
 				1233425C25E287C20053FEAF /* AppDelegate.swift in Sources */,
+				120D8133261A1B0F00A0AF6B /* RoundCurveBtnView.swift in Sources */,
 				12FC2B02260267560015DD7E /* DrugsInStoreCell.swift in Sources */,
 				1252A39D25FBC1B700F5AE25 /* CircleImage.swift in Sources */,
 				123342C725E28C030053FEAF /* DrugCell.swift in Sources */,
@@ -525,6 +534,7 @@
 				1219489E25EE479600D7FFE7 /* DrugstoreHasDrugs.swift in Sources */,
 				1252A39025FBA9CF00F5AE25 /* UiviewControllerExtentions.swift in Sources */,
 				1233425E25E287C20053FEAF /* SceneDelegate.swift in Sources */,
+				12CC6102260CA209006D19C8 /* CreateAccountVC.swift in Sources */,
 				1233429E25E288D70053FEAF /* DrugStore.swift in Sources */,
 				12FE4B2C25FCFB7A003861FD /* DrugStoreVC.swift in Sources */,
 				12C403FA25FB732A00311E73 /* SWRevealViewController.m in Sources */,
@@ -533,6 +543,7 @@
 				12B604E02601305E00961A54 /* StoreWithDrugCell.swift in Sources */,
 				126A012B25EC9D11007721F9 /* Constants.swift in Sources */,
 				1277318426009CD900F5CB30 /* RoundCurveImg.swift in Sources */,
+				12CC60FD260C746F006D19C8 /* LogInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +656,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -699,6 +711,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -710,6 +723,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MedMiner/MedMiner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RRVFL5U9Z4;
 				INFOPLIST_FILE = MedMiner/Info.plist;
@@ -718,8 +732,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.nhr.MedMiner;
+				PRODUCT_BUNDLE_IDENTIFIER = MedMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "MedMiner/Supporting Files/MedMiner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -734,6 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MedMiner/MedMiner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RRVFL5U9Z4;
 				INFOPLIST_FILE = MedMiner/Info.plist;
@@ -742,8 +759,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.nhr.MedMiner;
+				PRODUCT_BUNDLE_IDENTIFIER = MedMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "MedMiner/Supporting Files/MedMiner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -755,7 +774,6 @@
 			baseConfigurationReference = 83CFCEA28D4859EF49B06831 /* Pods-MedMinerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RRVFL5U9Z4;
 				INFOPLIST_FILE = MedMinerTests/Info.plist;
@@ -769,7 +787,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedMiner.app/MedMiner";
 			};
 			name = Debug;
 		};
@@ -778,7 +795,6 @@
 			baseConfigurationReference = FEB4DF61005DDEFD6ACD1E86 /* Pods-MedMinerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RRVFL5U9Z4;
 				INFOPLIST_FILE = MedMinerTests/Info.plist;
@@ -792,7 +808,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedMiner.app/MedMiner";
 			};
 			name = Release;
 		};
@@ -811,9 +826,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = NHR.MedMinerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MedMiner;
 			};
 			name = Debug;
 		};
@@ -832,9 +847,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = NHR.MedMinerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MedMiner;
 			};
 			name = Release;
 		};

@@ -10,16 +10,21 @@ import UIKit
 
 extension UIViewController {
     
+    
+    func navigatinBackBarButtonConfig() {
+        
+        let backBarBtn = UIBarButtonItem(title: self.navigationItem.title, style: .plain, target: nil, action: nil)
+        backBarBtn.tintColor = navigationItemColor
+        navigationItem.backBarButtonItem = backBarBtn
+        
+    }
+    
     func setUpNavBarItems() {
         
-        let menuBtn = UIButton(type: .system)
-        menuBtn.setTitle("Menu", for: .normal)
-        menuBtn.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-        menuBtn.contentMode = .scaleAspectFit
-        menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:)), for: .touchUpInside)
-        
-        let menuBarBtn = UIBarButtonItem(customView: menuBtn)
-        
+
+        let menuBarBtn = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3"), style: .plain, target: self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:)))
+        menuBarBtn.tintColor = navigationItemColor
+        navigationItem.backBarButtonItem?.tintColor = navigationItemColor
         navigationItem.rightBarButtonItems = [menuBarBtn]
         
         
@@ -30,7 +35,7 @@ extension UIViewController {
         navigationItem.title = title
     }
     
-    
+
     
     func addGestureConfig() -> UITapGestureRecognizer {
         

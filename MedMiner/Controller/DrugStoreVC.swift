@@ -142,6 +142,8 @@ class DrugStoreVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let drugInfo = segue.destination as? DrugInfoVC {
             
+            navigatinBackBarButtonConfig()
+            
             assert(sender as? DrugInfoVC != nil)
             drugInfo.initInfo(sender as! DrugstoreHasDrugs)
             
