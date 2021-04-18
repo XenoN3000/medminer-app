@@ -113,7 +113,7 @@ class DrugStoreVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)!.contentView.backgroundColor = .yellow
+        tableView.cellForRow(at: indexPath)!.contentView.backgroundColor = tableViewRowColor
     }
     
     
@@ -143,8 +143,8 @@ class DrugStoreVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDel
         if let drugInfo = segue.destination as? DrugInfoVC {
             
             navigatinBackBarButtonConfig()
-            
-            assert(sender as? DrugInfoVC != nil)
+        
+            assert(sender as? DrugstoreHasDrugs != nil)
             drugInfo.initInfo(sender as! DrugstoreHasDrugs)
             
         }

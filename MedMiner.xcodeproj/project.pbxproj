@@ -177,7 +177,6 @@
 				1233429925E288D70053FEAF /* Controller */,
 				1233425B25E287C20053FEAF /* AppDelegate.swift */,
 				1233425D25E287C20053FEAF /* SceneDelegate.swift */,
-				1233426125E287C20053FEAF /* Main.storyboard */,
 				1233426425E287C30053FEAF /* Assets.xcassets */,
 				1233426625E287C30053FEAF /* LaunchScreen.storyboard */,
 				1233426925E287C30053FEAF /* Info.plist */,
@@ -217,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				1252A38E25FBA98400F5AE25 /* Extentions */,
+				1233426125E287C20053FEAF /* Main.storyboard */,
 				123342C625E28C030053FEAF /* DrugCell.swift */,
 				1252A39C25FBC1B700F5AE25 /* CircleImage.swift */,
 				1259058225FF2BC7003579A7 /* RoundCurveView.swift */,

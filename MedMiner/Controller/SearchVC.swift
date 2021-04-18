@@ -98,7 +98,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)!.contentView.backgroundColor = .yellow
+        tableView.cellForRow(at: indexPath)!.contentView.backgroundColor = tableViewRowColor
     }
     
 
@@ -109,11 +109,13 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         if let drugStoreVC = segue.destination as? DrugStoreVC {
 
             navigatinBackBarButtonConfig()
+            
             assert(sender as? DrugStore != nil)
             drugStoreVC.initDrugStore(drugStore: sender as! DrugStore)
         }else if let drugVC = segue.destination as? DrugVC {
             
             navigatinBackBarButtonConfig()
+            
             assert(sender as? Drug != nil)
             drugVC.initDrug(drug: sender as! Drug)
         }

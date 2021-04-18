@@ -106,7 +106,7 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
         let storeWithDrug = SearchService.instance.storesWithDrug[indexPath.row]
         print(storeWithDrug)
         view.endEditing(true)
-        performSegue(withIdentifier: TO_DRUG_INFO, sender: storeWithDrug)
+        performSegue(withIdentifier: TO_DRUG_INFO, sender: storeWithDrug )
         
     }
     
@@ -116,7 +116,7 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)!.contentView.backgroundColor = .yellow
+        tableView.cellForRow(at: indexPath)!.contentView.backgroundColor = tableViewRowColor
     }
     
     
@@ -155,7 +155,7 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
             
             navigatinBackBarButtonConfig()
             
-            assert(sender as? DrugInfoVC != nil)
+            assert(sender as? DrugstoreHasDrugs != nil)
             drugInfoVC.initInfo(sender as! DrugstoreHasDrugs)
         }
         

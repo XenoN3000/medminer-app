@@ -39,3 +39,4 @@ let HEADER = [
 
 //colors
 let navigationItemColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+let tableViewRowColor = #colorLiteral(red: 0, green: 0.8303908706, blue: 0.3955751657, alpha: 1)

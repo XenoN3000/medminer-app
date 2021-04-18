@@ -424,7 +424,7 @@
         <!--DrugInfo-->
         <scene sceneID="saU-g9-qLm">
             <objects>
-                <viewController id="9TX-av-XOw" sceneMemberID="viewController">
+                <viewController id="9TX-av-XOw" customClass="DrugInfoVC" customModule="MedMiner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xO-v2-fqq">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
