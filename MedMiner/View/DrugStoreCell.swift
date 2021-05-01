@@ -25,9 +25,9 @@ class DrugStoreCell: UITableViewCell {
     
     
     func configureCell(drugStore : DrugStore) {
-        self.img.image = UIImage(named: drugStore.image)
+        self.img.image = UIImage(named: drugStore.picture ?? "\(DEFAULT_DS_PIC)")
         self.name.text = drugStore.name
-        self.desc.text = "City: \(String(describing: drugStore.city)) Address: \(String(describing: drugStore.address))  working-time: \(String(drugStore.open) ) - \(String(drugStore.close))"
+        self.desc.text = "City: \(String(describing: drugStore.city)) Address: \(String(describing: drugStore.address))  working-time: \(drugStore.worktime)"
     
     }
     

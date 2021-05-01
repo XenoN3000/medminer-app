@@ -51,7 +51,7 @@ class DrugStoreVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDel
     }
     
     func setUpView() {
-        self.dSImg.image = UIImage(named: _drugStore.image)
+        self.dSImg.image = UIImage(named: _drugStore.picture ?? "\(DEFAULT_DS_PIC)")
         self.dSName.text = _drugStore.name
         self.dSAddrss.text = "\(_drugStore.city) - \(_drugStore.address)"
     }

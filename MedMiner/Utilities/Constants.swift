@@ -28,9 +28,15 @@ let DRUGS_IN_DRUGSTORE = "drugsInStore"
 // URL Constants
 let BASE_URL = "http://localhost:5000/api"
 let SEARCH_DRUGS_URL = "\(BASE_URL)/drugs"
+let SEARCH_DRUGS_BY_NAME_URL = "\(SEARCH_DRUGS_URL)/name?name="
+
 let SEARCH_DS_URL = "\(BASE_URL)/drugstores"
-let SEARCH_DRUGSTORE_WITH_DRUG_URL = "\(BASE_URL)/StoresWithDrug"
-let SEARCH_DRUGS_IN_DRUGSTORE_URL = "\(BASE_URL)/drugsinstore"
+let SEARCH_DS_BY_NAME_URL = "\(SEARCH_DS_URL)/name?name="
+
+let SEARCH_DRUGSTORE_WITH_DRUG_URL1 = "\(BASE_URL)/StoresWithDrug"
+let SEARCH_DRUGS_IN_DRUGSTORE_URL1 = "\(BASE_URL)/drugsinstore"
+let SEARCH_DRUGS_IN_DRUGSTORE_URL = "\(BASE_URL)/drugsinstore/city/name/drugname"
+let SEARCH_DRUGSTORE_WITH_DRUG_URL = "\(BASE_URL)/drugsinstore/name/drugname"
 
 //Headers
 let HEADER = [
@@ -40,3 +46,17 @@ let HEADER = [
 //colors
 let navigationItemColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 let tableViewRowColor = #colorLiteral(red: 0, green: 0.8303908706, blue: 0.3955751657, alpha: 1)
+
+// default pictures
+let PillFill = "pills.fill"
+let Pills = "pills"
+let HomeFill = "house.fill"
+let Home = "house"
+
+
+let DEFAULT_DRUG_PIC = "\(PillFill)"
+let DEFAULT_DS_PIC = "\(HomeFill)"
+
+
+
+

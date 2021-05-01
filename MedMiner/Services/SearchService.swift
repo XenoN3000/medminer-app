@@ -40,8 +40,7 @@ class SearchService {
     //method to generate test value
 
     func findDS(drugStoreName: String, completion: @escaping CompletionHandler) {
-        let url = "\(SEARCH_DS_URL)/\(drugStoreName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        
+        let url = "\(SEARCH_DS_BY_NAME_URL)\(drugStoreName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
         self.clearDrugstores()
         Alamofire.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).validate().responseJSON{ (response) in
@@ -68,8 +67,8 @@ class SearchService {
  }
 
     func findDrugs(drugName: String, completion: @escaping CompletionHandler) {
-        let url = "\(SEARCH_DRUGS_URL)/\(drugName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        
+        let url = "\(SEARCH_DRUGS_BY_NAME_URL)\(drugName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+       
         self.clearMedicines()
         Alamofire.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).validate().responseJSON { (response) in
             
@@ -92,6 +91,8 @@ class SearchService {
             }
             
         }
+        
+        print(medicines)
 
     }
     
@@ -99,7 +100,7 @@ class SearchService {
     
     func findStoresWithdrug(drug: Drug, storeName: String, complition: @escaping CompletionHandler) {
         
-        let url = "\(SEARCH_DRUGSTORE_WITH_DRUG_URL)/\(drug.id)/\(storeName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = "\(SEARCH_DRUGSTORE_WITH_DRUG_URL),\(storeName),\(drug.name)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         self.clearStoresWithdrug()
         
         Alamofire.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).validate().responseJSON { (response) in
@@ -128,8 +129,10 @@ class SearchService {
     
     
     func findDrugsInStore(store: DrugStore, drugName: String, complition: @escaping CompletionHandler) {
-        let urlString = "\(SEARCH_DRUGS_IN_DRUGSTORE_URL)/\(store.city)/\(store.name)/\(drugName)"
+        let urlString = "\(SEARCH_DRUGS_IN_DRUGSTORE_URL),\(store.city),\(store.name),\(drugName)"
         let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        print(url!)
         
         self.clearDrugsInDrugstore()
         

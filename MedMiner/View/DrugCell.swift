@@ -26,9 +26,9 @@ class DrugCell: UITableViewCell {
     
     
     func configureCell(medicine : Drug) {
-        self.medImg.image = UIImage(named: medicine.image)
+        self.medImg.image = UIImage(named: medicine.picture ?? "\(DEFAULT_DRUG_PIC)")
         self.medName.text = medicine.name
-        self.medDesc.text = "price: \(String(describing: medicine.price))    company:\(String(describing:medicine.companyName))"
+        self.medDesc.text = "company:\(String(describing:medicine.company_Name))"
         
 
     

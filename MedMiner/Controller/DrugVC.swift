@@ -43,7 +43,7 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
     }
 
     func setUpView(){
-        self.drugImg.image = UIImage(named: self._drug!.image)
+        self.drugImg.image = UIImage(named: self._drug!.picture ?? "\(DEFAULT_DRUG_PIC)")
         self.drugName.text = self._drug!.name
         
         
