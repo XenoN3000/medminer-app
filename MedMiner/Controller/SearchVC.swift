@@ -44,6 +44,17 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         view.addGestureRecognizer(tap)
         
         menuGestureConfig()
+        
+        
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByToken { (success) in
+                if success{
+                    NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                }else{
+                    
+                }
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

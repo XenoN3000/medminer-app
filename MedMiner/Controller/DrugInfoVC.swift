@@ -25,7 +25,7 @@ class DrugInfoVC: UIViewController {
     }
     
     
-    
+  
 
     /*
     // MARK: - Navigation

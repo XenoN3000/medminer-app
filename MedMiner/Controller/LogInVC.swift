@@ -48,10 +48,17 @@ class LogInVC: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         
-        //login Stuff
+    
+        guard let phoneNumber = userNameTxtBox.text else { return }
+        guard let pass = passwordTxtBox.text else { return }
+        AuthService.instance.loginUser(phoneNumber: phoneNumber, password: pass) { (success) in
+            if success {
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
         
         
-        dismiss(animated: true, completion: nil)
         
     }
     

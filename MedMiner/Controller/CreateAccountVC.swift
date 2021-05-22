@@ -24,8 +24,26 @@ class CreateAccountVC: UIViewController {
     //Actions
     @IBAction func createAccountPeressed(_ sender: Any) {
         
-        
-        performSegue(withIdentifier: UNWIND_TO_USER_MENU, sender: nil)
+        guard let userName = userNameTxtBox.text else { return }
+        guard let password = passwordTxtBox.text else { return }
+        guard let phoneNumber = emailOrPhoneTxtBox.text else { return }
+
+       
+        AuthService.instance.registerUser(phoneNumber: phoneNumber, name: userName, passWord: password) { (success) in
+            if success {
+                AuthService.instance.loginUser(phoneNumber: phoneNumber, password: password) { (loginSuccess) in
+                    if loginSuccess {
+                        NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                        self.performSegue(withIdentifier: UNWIND_TO_USER_MENU, sender: nil)
+                    }else{
+                        print("error")
+                    }
+                }
+            }else{
+                print("errrrrroooorrrrr")
+            }
+        }
+
     }
     
     

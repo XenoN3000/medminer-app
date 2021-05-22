@@ -454,7 +454,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="600" id="mWF-zr-iCE"/>
                                         </constraints>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -749,7 +749,7 @@
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="aT9-xk-r1t" kind="show" id="VZS-WS-Ncs"/>
+                                            <action selector="loginBtnPressed:" destination="Ked-LA-oBt" eventType="touchUpInside" id="csP-XB-Sgu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -778,6 +778,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UsR-fQ-IMu"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="soO-Pa-ngK" id="BVx-iF-0gk"/>
+                        <segue destination="0r0-aN-XhZ" kind="show" identifier="toLogIn" id="bni-xg-49w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg2-bk-GaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -829,7 +833,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1d-pg-hrx">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoe-i8-8Gx">
                                                 <rect key="frame" x="0.0" y="25" width="250" height="1"/>
@@ -854,16 +858,17 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-Og-Pqc" customClass="RoundCurveBtnView" customModule="MedMiner" customModuleProvider="target">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-Og-Pqc" customClass="RoundCurveBtnView" customModule="MedMiner" customModuleProvider="target">
                                 <rect key="frame" x="89" y="692" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.32156862745098036" green="0.81724125150000004" blue="0.44307070970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="692-br-N9Q"/>
                                     <constraint firstAttribute="height" constant="50" id="jpu-m9-Yha"/>
                                 </constraints>
-                                <state key="normal" title="LogIn">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" systemColor="tertiaryLabelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="LogIn"/>
+                                <state key="selected">
+                                    <color key="titleColor" systemColor="systemGray5Color"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
@@ -902,7 +907,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbi-d4-k80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2817.7570093457944" y="1307.5593952483803"/>
+            <point key="canvasLocation" x="2228" y="1308"/>
         </scene>
         <!--Create An Account-->
         <scene sceneID="7P5-gp-par">
@@ -950,7 +955,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PassWord " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFc-Ey-r9q">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhs-DS-eGQ">
                                                 <rect key="frame" x="0.0" y="25" width="250" height="1"/>
@@ -1033,7 +1038,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M3-x2-k6h" customClass="RoundCurveBtnView" customModule="MedMiner">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M3-x2-k6h" customClass="RoundCurveBtnView" customModule="MedMiner">
                                 <rect key="frame" x="89" y="692" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.32156862749999998" green="0.81724125150000004" blue="0.44307070970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -1051,7 +1056,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="createAccountPeressed:" destination="g1Q-b8-foN" eventType="touchUpInside" id="zhs-Wq-IDg"/>
+                                    <action selector="createAccountPeressed:" destination="g1Q-b8-foN" eventType="touchUpInside" id="GL9-bl-T3z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1076,7 +1081,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMM-l3-lVS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="OgO-dE-gOj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3828.5046728971961" y="1307.5593952483803"/>
+            <point key="canvasLocation" x="3746" y="1308"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="gCY-Y4-k7D">
@@ -1452,29 +1457,29 @@
             <point key="canvasLocation" x="933.64485981308405" y="3669.9784017278621"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="q6w-zK-860">
+        <scene sceneID="zT8-Rf-CxS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="aT9-xk-r1t" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="0r0-aN-XhZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Fjl-xd-Dc6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QgP-yi-Ubd">
+                    <navigationItem key="navigationItem" id="Btq-P7-OIM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jKZ-G9-Sx1">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.32156862749999998" green="0.81724125150000004" blue="0.44307070970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.013743432240000001" green="0.83747190240000002" blue="0.39599111679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="oey-ad-p8r" kind="relationship" relationship="rootViewController" id="38y-pc-w8Q"/>
+                        <segue destination="oey-ad-p8r" kind="relationship" relationship="rootViewController" id="9sn-BN-YpI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14D-jj-H2B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2K-LD-InU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917.7570093457944" y="1307.5593952483803"/>
+            <point key="canvasLocation" x="1136" y="1308"/>
         </scene>
     </scenes>
     <designables>
         <designable name="0WB-Og-Pqc">
-            <size key="intrinsicContentSize" width="45" height="34"/>
+            <size key="intrinsicContentSize" width="38" height="30"/>
         </designable>
         <designable name="2M3-x2-k6h">
             <size key="intrinsicContentSize" width="126" height="36"/>
@@ -1526,7 +1531,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="RLG-bq-lvF"/>
+        <segue reference="C7c-nG-5Sb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="87" height="87"/>
@@ -1548,6 +1553,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

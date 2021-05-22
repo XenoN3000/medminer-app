@@ -16,7 +16,7 @@ let TO_DRUG_STORE = "ToDrugStore"
 let TO_DRUG = "ToDrug"
 let TO_DRUG_INFO = "ToDrugInfo"
 let UNWIND_TO_USER_MENU = "unwindToUserMenu"
-
+let TO_LOGIN = "toLogIn"
 
 
 //tablwViews ID
@@ -38,9 +38,17 @@ let SEARCH_DRUGS_IN_DRUGSTORE_URL1 = "\(BASE_URL)/drugsinstore"
 let SEARCH_DRUGS_IN_DRUGSTORE_URL = "\(BASE_URL)/drugsinstore/city/name/drugname"
 let SEARCH_DRUGSTORE_WITH_DRUG_URL = "\(BASE_URL)/drugsinstore/name/drugname"
 
+let USER_REGISTER = "\(BASE_URL)/Customers"
+let LOGIN_USER = "\(BASE_URL)/getToken/phonenumber/password"
+
+let FIND_USER_BY_TOKEN_URL = "\(BASE_URL)/getdetails/token"
+
+
+
+
 //Headers
 let HEADER = [
-    "Content-type":"application/json; charset=utf-8"
+    "Content-type":"application/json"
 ]
 
 //colors
@@ -59,4 +67,17 @@ let DEFAULT_DS_PIC = "\(HomeFill)"
 
 
 
+
+
+//user defualts
+
+let LOGGED_IN_KEY = "loggedIn"
+let TOKEN_KEY = "token"
+let USER_EMAIL_KEY = "userEmail"
+let USER_PHONE_NUMBER_KEY = "userPhoneNumber"
+
+
+
+//Notification Constants
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
 
