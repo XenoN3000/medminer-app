@@ -32,7 +32,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavBarItems()
-        
+        setUpView()
         searchTableView.delegate = self
         searchTableView.dataSource = self
         searchTxtBox.delegate = self
@@ -57,6 +57,17 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    
+    func setUpView() {
+        SearchService.instance.findDrugs { (success) in
+            if success{
+                self.searchTableView.reloadData()
+            }
+        }
     }
     
     
@@ -138,9 +149,19 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         if segmentControl.selectedSegmentIndex == 0 {
             searchTxtBox.text = ""
             segmentCondition = false
+            SearchService.instance.findDrugs { (success) in
+                if success{
+                    self.searchTableView.reloadData()
+                }
+            }
         }else {
             searchTxtBox.text = ""
             segmentCondition = true
+            SearchService.instance.findDS { (success) in
+                if success{
+                    self.searchTableView.reloadData()
+                }
+            }
         }
         searchTableView.reloadData()
     }

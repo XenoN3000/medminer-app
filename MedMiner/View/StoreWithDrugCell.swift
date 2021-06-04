@@ -26,7 +26,7 @@ class StoreWithDrugCell: UITableViewCell {
     }
     
     func configureCell(storeWithDrug: DrugstoreHasDrugs) {
-        self.img.image = UIImage(named: storeWithDrug.drugstore.picture ?? "\(DEFAULT_DS_PIC)")
+        self.img.image = UIImage(named: storeWithDrug.drugstore?.picture ?? "\(DEFAULT_DS_PIC)")
         self.name.text = storeWithDrug.name
         self.desc.text = "count: \(String(storeWithDrug.count)) price: \(String(storeWithDrug.price))"
     }

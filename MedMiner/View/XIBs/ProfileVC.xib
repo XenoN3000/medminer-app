@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-eM-qbx">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-eM-qbx" customClass="RoundCurveView" customModule="MedMiner" customModuleProvider="target">
                     <rect key="frame" x="57" y="273" width="300" height="350"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXt-g7-4H6">
@@ -64,7 +64,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="mXt-g7-4H6" firstAttribute="centerX" secondItem="gR0-eM-qbx" secondAttribute="centerX" id="1WB-Q0-FIY"/>
                         <constraint firstAttribute="width" secondItem="gR0-eM-qbx" secondAttribute="height" multiplier="6:7" id="6sO-KX-avg"/>
@@ -75,6 +75,14 @@
                         <constraint firstItem="4jg-0Z-umu" firstAttribute="top" secondItem="gR0-eM-qbx" secondAttribute="top" constant="81" id="lf5-Qs-ZmO"/>
                         <constraint firstAttribute="bottom" secondItem="mXt-g7-4H6" secondAttribute="bottom" constant="42" id="pnK-nh-xW2"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="curveRaidus">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -90,8 +98,8 @@
     </objects>
     <resources>
         <image name="x.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

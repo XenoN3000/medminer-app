@@ -14,5 +14,6 @@ struct DrugstoreHasDrugs: Decodable {
     public private(set) var drug: Drug
     public private(set) var name: String
     public private(set) var city: String
-    public private(set) var drugstore: DrugStore
+    public private(set) var drugstore: DrugStore?
+
 }

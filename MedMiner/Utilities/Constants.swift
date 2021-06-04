@@ -37,12 +37,13 @@ let SEARCH_DRUGSTORE_WITH_DRUG_URL1 = "\(BASE_URL)/StoresWithDrug"
 let SEARCH_DRUGS_IN_DRUGSTORE_URL1 = "\(BASE_URL)/drugsinstore"
 let SEARCH_DRUGS_IN_DRUGSTORE_URL = "\(BASE_URL)/drugsinstore/city/name/drugname"
 let SEARCH_DRUGSTORE_WITH_DRUG_URL = "\(BASE_URL)/drugsinstore/name/drugname"
+let SEARCH_STORES_WITH_DURGS_FIRSTTIME_URL = "\(BASE_URL)/storeswithdrug/drugname"
 
 let USER_REGISTER = "\(BASE_URL)/Customers"
 let LOGIN_USER = "\(BASE_URL)/getToken/phonenumber/password"
 
 let FIND_USER_BY_TOKEN_URL = "\(BASE_URL)/getdetails/token"
-
+//let FIRST_DRUG_STORES_LOADED_URL = "\(BASE_URL)/Drugstores"
 
 
 

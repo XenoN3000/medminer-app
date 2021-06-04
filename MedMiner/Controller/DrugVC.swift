@@ -45,7 +45,11 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
     func setUpView(){
         self.drugImg.image = UIImage(named: self._drug!.picture ?? "\(DEFAULT_DRUG_PIC)")
         self.drugName.text = self._drug!.name
-        
+        SearchService.instance.findStoresWithdrug(drug: _drug) { (success) in
+            if success{
+                self.searchTableView.reloadData()
+            }
+        }
         
         
         
@@ -160,5 +164,6 @@ class DrugVC: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate
         }
         
     }
+    
 
 }

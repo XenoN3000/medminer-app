@@ -65,6 +65,34 @@ class SearchService {
             }
     }
  }
+    
+    
+    func findDS(completion: @escaping CompletionHandler) {
+        let url = "\(SEARCH_DS_URL)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        self.clearDrugstores()
+        Alamofire.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).validate().responseJSON{ (response) in
+            
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                
+                do{
+                    self.DrugStores = try JSONDecoder().decode([DrugStore].self, from: json.rawData())
+                    completion(true)
+                }catch{
+                    debugPrint(error)
+                    completion(false)
+                }
+                
+            case .failure(let error):
+                completion(false)
+                print(error)
+                
+            }
+        }
+    }
 
     func findDrugs(drugName: String, completion: @escaping CompletionHandler) {
         let url = "\(SEARCH_DRUGS_BY_NAME_URL)\(drugName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -94,6 +122,33 @@ class SearchService {
         
         print(medicines)
 
+    }
+    
+    func findDrugs(completion: @escaping CompletionHandler) {
+        let url = "\(SEARCH_DRUGS_URL)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+       
+        self.clearMedicines()
+        Alamofire.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).validate().responseJSON { (response) in
+            
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                do{
+                    self.medicines = try JSONDecoder().decode([Drug].self, from: json.rawData())
+                    completion(true)
+                }catch{
+                    debugPrint(error)
+                    completion(false)
+                }
+                
+            case .failure(let error):
+                completion(false)
+                print(error)
+                
+            }
+            
+        }
     }
     
     
@@ -126,6 +181,36 @@ class SearchService {
         }
     }
     
+    
+    func findStoresWithdrug(drug: Drug, complition: @escaping CompletionHandler) {
+        
+        let url = "\(SEARCH_STORES_WITH_DURGS_FIRSTTIME_URL),\(drug.name)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        self.clearStoresWithdrug()
+        
+        Alamofire.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).validate().responseJSON { (response) in
+            
+            switch response.result{
+                case .success(let value):
+                    let json = JSON(value)
+                
+                    do{
+                        self.storesWithDrug = try JSONDecoder().decode([DrugstoreHasDrugs].self, from: json.rawData())
+                        complition(true)
+                    }catch{
+                        debugPrint(error as Any)
+                        complition(false)
+                    }
+                
+                    break
+                case .failure(let error):
+                    complition(false)
+                    print(error)
+                }
+            
+        }
+        
+      
+    }
     
     
     func findDrugsInStore(store: DrugStore, drugName: String, complition: @escaping CompletionHandler) {
