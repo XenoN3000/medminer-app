@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct DrugStore: Decodable {
+struct DrugStore: Codable {
     
     public private(set) var name : String
     public private(set) var address : String
@@ -17,5 +17,6 @@ struct DrugStore: Decodable {
     public private(set) var drugstore_Has_Drugs : [DrugstoreHasDrugs]!
     public private(set) var picture : String?
     public private(set) var worktime : String
+    public private(set) var coordinate : Coordinate
     
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DrugstoreHasDrugs: Decodable {
+struct DrugstoreHasDrugs: Codable {
     public private(set) var price: String
     public private(set) var count: Int
     public private(set) var drug_ID: String

@@ -19,9 +19,11 @@ let UNWIND_TO_USER_MENU = "unwindToUserMenu"
 let TO_LOGIN = "toLogIn"
 
 
-//tablwViews ID
+//MARK: - tablwViews ID
 let STORE_WITH_DRUG_ID = "storeWithDrugCell"
 let DRUGS_IN_DRUGSTORE = "drugsInStore"
+let DRUG_USAGE_CELL = "uasgeCell"
+
 
 
 
@@ -76,6 +78,9 @@ let LOGGED_IN_KEY = "loggedIn"
 let TOKEN_KEY = "token"
 let USER_EMAIL_KEY = "userEmail"
 let USER_PHONE_NUMBER_KEY = "userPhoneNumber"
+let MEDICINE_USAGE_KEY = "medicineUsage"
+let CART_KEY = "cartKey"
+
 
 
 

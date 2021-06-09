@@ -129,6 +129,8 @@ class AuthService {
             let json = try JSON(data: data)
             let name = json["name"].stringValue
             let phoneNumber = json["phonenumber"].stringValue
+            let coordinatr = json["coordinate"]
+            
             
             print(name)
             UserDataService.instance.setUSerDAta(name: name, phoneNumber: phoneNumber)

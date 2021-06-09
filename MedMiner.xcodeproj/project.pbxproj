@@ -39,8 +39,12 @@
 		1279288B2642C44800C27081 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279288A2642C44800C27081 /* AuthService.swift */; };
 		12B604E02601305E00961A54 /* StoreWithDrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */; };
 		12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604E426014E5C00961A54 /* DrugInfoVC.swift */; };
+		12B6B1FE2670F2FA00B71082 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B6B1FD2670F2FA00B71082 /* Coordinate.swift */; };
 		12C403FA25FB732A00311E73 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C403F925FB732A00311E73 /* SWRevealViewController.m */; };
 		12C403FF25FB89A200311E73 /* UserMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C403FE25FB89A200311E73 /* UserMenuVC.swift */; };
+		12C73275266D18BA0027FA42 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C73274266D18BA0027FA42 /* CartVC.swift */; };
+		12C73278266D1A8B0027FA42 /* UsageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C73277266D1A8B0027FA42 /* UsageTVC.swift */; };
+		12C7327A266D28960027FA42 /* DrugUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C73279266D28960027FA42 /* DrugUsage.swift */; };
 		12CC60FD260C746F006D19C8 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC60FC260C746F006D19C8 /* LogInVC.swift */; };
 		12CC6102260CA209006D19C8 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC6101260CA209006D19C8 /* CreateAccountVC.swift */; };
 		12FC2B02260267560015DD7E /* DrugsInStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */; };
@@ -104,10 +108,14 @@
 		1279288A2642C44800C27081 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWithDrugCell.swift; sourceTree = "<group>"; };
 		12B604E426014E5C00961A54 /* DrugInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInfoVC.swift; sourceTree = "<group>"; };
+		12B6B1FD2670F2FA00B71082 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		12C403F725FB732900311E73 /* MedMiner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedMiner-Bridging-Header.h"; sourceTree = "<group>"; };
 		12C403F825FB732A00311E73 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		12C403F925FB732A00311E73 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		12C403FE25FB89A200311E73 /* UserMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuVC.swift; sourceTree = "<group>"; };
+		12C73274266D18BA0027FA42 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		12C73277266D1A8B0027FA42 /* UsageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageTVC.swift; sourceTree = "<group>"; };
+		12C73279266D28960027FA42 /* DrugUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugUsage.swift; sourceTree = "<group>"; };
 		12CC60FC260C746F006D19C8 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		12CC6101260CA209006D19C8 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsInStoreCell.swift; sourceTree = "<group>"; };
@@ -246,6 +254,8 @@
 				1233429625E288D70053FEAF /* Drug.swift */,
 				1233429725E288D70053FEAF /* DrugStore.swift */,
 				1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */,
+				12C73279266D28960027FA42 /* DrugUsage.swift */,
+				12B6B1FD2670F2FA00B71082 /* Coordinate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +279,8 @@
 				12CC60FC260C746F006D19C8 /* LogInVC.swift */,
 				12CC6101260CA209006D19C8 /* CreateAccountVC.swift */,
 				123CC4BE2656A85A007D39FF /* ProfileVC.swift */,
+				12C73274266D18BA0027FA42 /* CartVC.swift */,
+				12C73277266D1A8B0027FA42 /* UsageTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -558,7 +570,9 @@
 				123342C725E28C030053FEAF /* DrugCell.swift in Sources */,
 				120C1F0425FF8A8C00549C0E /* HandleTapView.swift in Sources */,
 				12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */,
+				12C7327A266D28960027FA42 /* DrugUsage.swift in Sources */,
 				12C403FF25FB89A200311E73 /* UserMenuVC.swift in Sources */,
+				12B6B1FE2670F2FA00B71082 /* Coordinate.swift in Sources */,
 				1277317F2600937200F5CB30 /* DrugStoreCell.swift in Sources */,
 				123342C225E28BA80053FEAF /* KeyboardBoundView.swift in Sources */,
 				1219489E25EE479600D7FFE7 /* DrugstoreHasDrugs.swift in Sources */,
@@ -567,12 +581,14 @@
 				12CC6102260CA209006D19C8 /* CreateAccountVC.swift in Sources */,
 				1233429E25E288D70053FEAF /* DrugStore.swift in Sources */,
 				12FE4B2C25FCFB7A003861FD /* DrugStoreVC.swift in Sources */,
+				12C73275266D18BA0027FA42 /* CartVC.swift in Sources */,
 				12C403FA25FB732A00311E73 /* SWRevealViewController.m in Sources */,
 				1233429D25E288D70053FEAF /* Drug.swift in Sources */,
 				1272623025FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift in Sources */,
 				123CC4C02656A85A007D39FF /* ProfileVC.swift in Sources */,
 				12B604E02601305E00961A54 /* StoreWithDrugCell.swift in Sources */,
 				126A012B25EC9D11007721F9 /* Constants.swift in Sources */,
+				12C73278266D1A8B0027FA42 /* UsageTVC.swift in Sources */,
 				1279288B2642C44800C27081 /* AuthService.swift in Sources */,
 				1277318426009CD900F5CB30 /* RoundCurveImg.swift in Sources */,
 				12CC60FD260C746F006D19C8 /* LogInVC.swift in Sources */,
