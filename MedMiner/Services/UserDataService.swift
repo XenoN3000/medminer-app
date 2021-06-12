@@ -75,6 +75,9 @@ class UserDataService {
     
 
     
+    func setCoordinate(coordinate: Coordinate) {
+        self.coordinate = coordinate
+    }
     
     
     

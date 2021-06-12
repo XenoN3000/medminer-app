@@ -19,7 +19,11 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        
+        debugPrint(LocationService.instance.locationManager.location?.coordinate.latitude)
+        debugPrint(LocationService.instance.locationManager.location?.coordinate.longitude)
 
+        
         // Do any additional setup after loading the view.
     }
 

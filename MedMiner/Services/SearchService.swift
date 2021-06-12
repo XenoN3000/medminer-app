@@ -52,6 +52,7 @@ class SearchService {
                 
                 do{
                     self.DrugStores = try JSONDecoder().decode([DrugStore].self, from: json.rawData())
+                    self.sortDrugstores(array: &self.DrugStores)
                     completion(true)
                 }catch{
                     debugPrint(error)
@@ -80,6 +81,8 @@ class SearchService {
                 
                 do{
                     self.DrugStores = try JSONDecoder().decode([DrugStore].self, from: json.rawData())
+                    self.sortDrugstores(array: &self.DrugStores)
+                    self.cutTailDs(array: &self.DrugStores)
                     completion(true)
                 }catch{
                     debugPrint(error)
@@ -166,6 +169,7 @@ class SearchService {
                 
                     do{
                         self.storesWithDrug = try JSONDecoder().decode([DrugstoreHasDrugs].self, from: json.rawData())
+                        self.sortDrugstoreHasDrug(array: &self.storesWithDrug)
                         complition(true)
                     }catch{
                         debugPrint(error as Any)
@@ -195,6 +199,8 @@ class SearchService {
                 
                     do{
                         self.storesWithDrug = try JSONDecoder().decode([DrugstoreHasDrugs].self, from: json.rawData())
+                        self.sortDrugstoreHasDrug(array: &self.storesWithDrug)
+                        self.cutTailDHD(array: &self.storesWithDrug)
                         complition(true)
                     }catch{
                         debugPrint(error as Any)
@@ -243,5 +249,49 @@ class SearchService {
     
     
     
+    private func sortDrugstoreHasDrug(array: inout [DrugstoreHasDrugs]) {
+        
+    for i in 0 ..< (array.count ) {
+            for j in 1 ..< (array.count - i) {
+                if (LocationService.instance.calculateDistqance(coordinate: array[ j ].drugstore!.coordinate) < LocationService.instance.calculateDistqance(coordinate: array[ j-1 ].drugstore!.coordinate)) {
+                    
+                    let temp = array[ j-1 ]
+                    array[ j-1 ] = array[ j ]
+                    array[ j ] = temp
+                    
+                }
+            }
+        }
+    }
+    
+    private func sortDrugstores(array: inout [DrugStore]) {
+        
+    for i in 0 ..< (array.count ) {
+            for j in 1 ..< (array.count - i) {
+                if (LocationService.instance.calculateDistqance(coordinate: array[ j ].coordinate) < LocationService.instance.calculateDistqance(coordinate: array[ j-1 ].coordinate)) {
+                    
+                    let temp = array[ j-1 ]
+                    array[ j-1 ] = array[ j ]
+                    array[ j ] = temp
+                    
+                }
+            }
+        }
+    }
 
+    
+    func cutTailDHD(array: inout [DrugstoreHasDrugs]) {
+        if array.count > 4 {
+            let temp = array[0 ..< 5]
+            array = Array(temp)
+        }
+    }
+    
+    func cutTailDs(array: inout [DrugStore]) {
+        if array.count > 4 {
+            let temp = array[0 ..< 5]
+            array = Array(temp)
+            
+        }
+    }
 }

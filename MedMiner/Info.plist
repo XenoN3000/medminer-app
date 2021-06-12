@@ -79,5 +79,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>MedMiner Wants to get your Location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>MedMiner Wants to get your Location</string>
 </dict>
 </plist>

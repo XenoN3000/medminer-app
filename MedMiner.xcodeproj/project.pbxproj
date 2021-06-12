@@ -37,6 +37,7 @@
 		127731892600BC2E00F5CB30 /* DrugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127731882600BC2E00F5CB30 /* DrugVC.swift */; };
 		1279288926429F0000C27081 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279288826429F0000C27081 /* UserDataService.swift */; };
 		1279288B2642C44800C27081 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279288A2642C44800C27081 /* AuthService.swift */; };
+		129FA0D82672449F0087E83F /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FA0D72672449F0087E83F /* LocationService.swift */; };
 		12B604E02601305E00961A54 /* StoreWithDrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */; };
 		12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B604E426014E5C00961A54 /* DrugInfoVC.swift */; };
 		12B6B1FE2670F2FA00B71082 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B6B1FD2670F2FA00B71082 /* Coordinate.swift */; };
@@ -106,6 +107,7 @@
 		127731882600BC2E00F5CB30 /* DrugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugVC.swift; sourceTree = "<group>"; };
 		1279288826429F0000C27081 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		1279288A2642C44800C27081 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		129FA0D72672449F0087E83F /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWithDrugCell.swift; sourceTree = "<group>"; };
 		12B604E426014E5C00961A54 /* DrugInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInfoVC.swift; sourceTree = "<group>"; };
 		12B6B1FD2670F2FA00B71082 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				1235CB8025FE02B4003D7CA0 /* KeyboardService.swift */,
 				1279288826429F0000C27081 /* UserDataService.swift */,
 				1279288A2642C44800C27081 /* AuthService.swift */,
+				129FA0D72672449F0087E83F /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				12C73278266D1A8B0027FA42 /* UsageTVC.swift in Sources */,
 				1279288B2642C44800C27081 /* AuthService.swift in Sources */,
 				1277318426009CD900F5CB30 /* RoundCurveImg.swift in Sources */,
+				129FA0D82672449F0087E83F /* LocationService.swift in Sources */,
 				12CC60FD260C746F006D19C8 /* LogInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,6 @@
 import UIKit
 
 
-
-
 class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, UITextFieldDelegate{
     
     
@@ -56,6 +54,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             }
         }
 
+        print(LocationService.instance.isEnable)
         // Do any additional setup after loading the view.
     }
     
