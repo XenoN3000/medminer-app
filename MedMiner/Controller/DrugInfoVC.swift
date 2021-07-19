@@ -6,22 +6,34 @@
 //
 
 import UIKit
+import UserNotifications
 
 class DrugInfoVC: UIViewController {
 
     
     //vars
     private var _drugStoreHasDrug: DrugstoreHasDrugs?
+    let notificationCenter = UNUserNotificationCenter.current()
+
     
     //OutLets
     @IBOutlet weak var drugImg: CircleImage!
     @IBOutlet weak var drugNameLbl: UILabel!
     @IBOutlet weak var drugInfo: UITextView!
+    @IBOutlet weak var addToFavoritBtn: RoundCurveBtnView!
+    @IBOutlet weak var addToCartBtn: RoundCurveBtnView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpView()
+        if _drugStoreHasDrug == nil {
+            addToCartBtn.isEnabled = false
+            addToFavoritBtn.isEnabled = false
+        }else{
+            addToCartBtn.isEnabled = true
+            addToFavoritBtn.isEnabled = true
+            setUpView()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -46,6 +58,16 @@ class DrugInfoVC: UIViewController {
     }
     
     
+    @IBAction func addToCartPressed(_ sender: Any) {
+        if let toCart = _drugStoreHasDrug {
+            UserDataService.instance.cart.append(toCart)
+        }
+        
+    }
+    
+    
+    
+    
     func addUsageRowStuf(){
         
         
@@ -65,10 +87,32 @@ class DrugInfoVC: UIViewController {
             
             if (name != "" && name != nil) && (dose != "" && dose != nil) && (period != "" && period != nil){
                 
-                        let druguseage = DrugUsage(name: name!, period: period!, dose: dose!)
+                let druguseage = DrugUsage(name: name!, period: period!, dose: dose!, id: UUID.init())
                                 
-                        UserDataService.instance.usages.append(druguseage)
-                        
+                UserDataService.instance.usages.append(druguseage)
+                
+                
+                
+                
+                let content = UNMutableNotificationContent()
+                
+                
+                content.title = "Reminder"
+                
+                content.body = "use \(dose!) of \(name!)"
+                content.sound = UNNotificationSound.default
+                content.badge = 1
+                
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (Double(period!)! * 60), repeats: true)
+            
+                let request = UNNotificationRequest(identifier: druguseage.id.uuidString, content: content, trigger: trigger)
+                
+                self.notificationCenter.add(request) { error in
+                    if let error = error  {
+                        print("Error \(error.localizedDescription)")
+                    }
+                }
             }else{
                 alert.message = "please complet all fields !"
                 self.present(alert, animated: true, completion: nil)

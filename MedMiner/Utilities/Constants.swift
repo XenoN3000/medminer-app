@@ -23,6 +23,7 @@ let TO_LOGIN = "toLogIn"
 let STORE_WITH_DRUG_ID = "storeWithDrugCell"
 let DRUGS_IN_DRUGSTORE = "drugsInStore"
 let DRUG_USAGE_CELL = "uasgeCell"
+let CART_CELL = "cartcell"
 
 
 

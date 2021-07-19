@@ -24,10 +24,18 @@
                                     <accessibilityTraits key="traits" link="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MED MINER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhB-ua-tbs">
+                                <rect key="frame" x="112" y="426.5" width="190" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MhB-ua-tbs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2IB-Ab-XXK"/>
+                            <constraint firstItem="MhB-ua-tbs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UfA-uL-n6e"/>
                             <constraint firstItem="MRc-e3-j0U" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="YAl-Vn-BcV"/>
                             <constraint firstAttribute="bottom" secondItem="MRc-e3-j0U" secondAttribute="bottom" id="dHE-3R-mbq"/>
                             <constraint firstItem="MRc-e3-j0U" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="hmx-3b-2rV"/>

@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06597F2902A0C3DDA2A73555 /* Pods_MedMinerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F2604454AAB7D713279EC2 /* Pods_MedMinerTests.framework */; };
+		1204235926A40FCF00C917CC /* OrdersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204235826A40FCF00C917CC /* OrdersTVC.swift */; };
 		120C1F0425FF8A8C00549C0E /* HandleTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C1F0325FF8A8C00549C0E /* HandleTapView.swift */; };
 		120D8133261A1B0F00A0AF6B /* RoundCurveBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D8132261A1B0F00A0AF6B /* RoundCurveBtnView.swift */; };
 		1219489E25EE479600D7FFE7 /* DrugstoreHasDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */; };
+		1228C80326760F3800A35BA7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1228C80226760F3800A35BA7 /* NotificationService.swift */; };
 		1233425C25E287C20053FEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233425B25E287C20053FEAF /* AppDelegate.swift */; };
 		1233425E25E287C20053FEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233425D25E287C20053FEAF /* SceneDelegate.swift */; };
 		1233426325E287C20053FEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1233426125E287C20053FEAF /* Main.storyboard */; };
@@ -25,10 +27,12 @@
 		123342C225E28BA80053FEAF /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123342C125E28BA80053FEAF /* KeyboardBoundView.swift */; };
 		123342C725E28C030053FEAF /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123342C625E28C030053FEAF /* DrugCell.swift */; };
 		1235CB8125FE02B4003D7CA0 /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235CB8025FE02B4003D7CA0 /* KeyboardService.swift */; };
+		12390D2326A4635D0030A659 /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12390D2226A4635D0030A659 /* CartViewCell.swift */; };
 		123CC4C02656A85A007D39FF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123CC4BE2656A85A007D39FF /* ProfileVC.swift */; };
 		123CC4C12656A85A007D39FF /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 123CC4BF2656A85A007D39FF /* ProfileVC.xib */; };
 		1252A39025FBA9CF00F5AE25 /* UiviewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1252A38F25FBA9CF00F5AE25 /* UiviewControllerExtentions.swift */; };
 		1252A39D25FBC1B700F5AE25 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1252A39C25FBC1B700F5AE25 /* CircleImage.swift */; };
+		1253154D2677949600CE3315 /* UsageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1253154C2677949600CE3315 /* UsageViewCell.swift */; };
 		1259058325FF2BC7003579A7 /* RoundCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259058225FF2BC7003579A7 /* RoundCurveView.swift */; };
 		126A012B25EC9D11007721F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126A012A25EC9D11007721F9 /* Constants.swift */; };
 		1272623025FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272622F25FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift */; };
@@ -72,9 +76,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1204235826A40FCF00C917CC /* OrdersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTVC.swift; sourceTree = "<group>"; };
 		120C1F0325FF8A8C00549C0E /* HandleTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTapView.swift; sourceTree = "<group>"; };
 		120D8132261A1B0F00A0AF6B /* RoundCurveBtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCurveBtnView.swift; sourceTree = "<group>"; };
 		1219489D25EE479600D7FFE7 /* DrugstoreHasDrugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugstoreHasDrugs.swift; sourceTree = "<group>"; };
+		1228C80226760F3800A35BA7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		1233425825E287C20053FEAF /* MedMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1233425B25E287C20053FEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1233425D25E287C20053FEAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,10 +101,12 @@
 		123342C125E28BA80053FEAF /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		123342C625E28C030053FEAF /* DrugCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
 		1235CB8025FE02B4003D7CA0 /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
+		12390D2226A4635D0030A659 /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
 		123CC4BE2656A85A007D39FF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		123CC4BF2656A85A007D39FF /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		1252A38F25FBA9CF00F5AE25 /* UiviewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiviewControllerExtentions.swift; sourceTree = "<group>"; };
 		1252A39C25FBC1B700F5AE25 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		1253154C2677949600CE3315 /* UsageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewCell.swift; sourceTree = "<group>"; };
 		1259058225FF2BC7003579A7 /* RoundCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCurveView.swift; sourceTree = "<group>"; };
 		126A012A25EC9D11007721F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1272622F25FE5AE6003EFF03 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
@@ -228,6 +236,7 @@
 				1279288826429F0000C27081 /* UserDataService.swift */,
 				1279288A2642C44800C27081 /* AuthService.swift */,
 				129FA0D72672449F0087E83F /* LocationService.swift */,
+				1228C80226760F3800A35BA7 /* NotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,6 +256,8 @@
 				12B604DF2601305E00961A54 /* StoreWithDrugCell.swift */,
 				12FC2B01260267560015DD7E /* DrugsInStoreCell.swift */,
 				120D8132261A1B0F00A0AF6B /* RoundCurveBtnView.swift */,
+				1253154C2677949600CE3315 /* UsageViewCell.swift */,
+				12390D2226A4635D0030A659 /* CartViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +295,7 @@
 				123CC4BE2656A85A007D39FF /* ProfileVC.swift */,
 				12C73274266D18BA0027FA42 /* CartVC.swift */,
 				12C73277266D1A8B0027FA42 /* UsageTVC.swift */,
+				1204235826A40FCF00C917CC /* OrdersTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -566,10 +578,14 @@
 				1233429B25E288D70053FEAF /* SearchService.swift in Sources */,
 				1259058325FF2BC7003579A7 /* RoundCurveView.swift in Sources */,
 				1233425C25E287C20053FEAF /* AppDelegate.swift in Sources */,
+				1253154D2677949600CE3315 /* UsageViewCell.swift in Sources */,
 				120D8133261A1B0F00A0AF6B /* RoundCurveBtnView.swift in Sources */,
+				1228C80326760F3800A35BA7 /* NotificationService.swift in Sources */,
 				1279288926429F0000C27081 /* UserDataService.swift in Sources */,
+				12390D2326A4635D0030A659 /* CartViewCell.swift in Sources */,
 				12FC2B02260267560015DD7E /* DrugsInStoreCell.swift in Sources */,
 				1252A39D25FBC1B700F5AE25 /* CircleImage.swift in Sources */,
+				1204235926A40FCF00C917CC /* OrdersTVC.swift in Sources */,
 				123342C725E28C030053FEAF /* DrugCell.swift in Sources */,
 				120C1F0425FF8A8C00549C0E /* HandleTapView.swift in Sources */,
 				12B604E526014E5C00961A54 /* DrugInfoVC.swift in Sources */,

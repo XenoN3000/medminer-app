@@ -29,8 +29,6 @@ class DrugCell: UITableViewCell {
         self.medImg.image = UIImage(named: medicine.picture ?? "\(DEFAULT_DRUG_PIC)")
         self.medName.text = medicine.name
         self.medDesc.text = "company:\(String(describing:medicine.company_Name))"
-        
-
     
     }
     

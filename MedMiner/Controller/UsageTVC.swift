@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import UserNotifications
 
 class UsageTVC: UITableViewController {
     
     
     
+    let notificationCenter = UNUserNotificationCenter.current()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +38,14 @@ class UsageTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DRUG_USAGE_CELL, for: indexPath)
-        let duseage = UserDataService.instance.usages[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DRUG_USAGE_CELL, for: indexPath) as? UsageViewCell{
+            let duseage = UserDataService.instance.usages[indexPath.row]
         
-        cell.textLabel?.text = duseage.name
-        cell.detailTextLabel?.text = "\(duseage.dose) Every \(duseage.period)"
-        
-        return cell
+            cell.configureCell(dusage: duseage)
+            
+            return cell
+        }
+           return UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -62,8 +65,11 @@ class UsageTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+            let endusage =  UserDataService.instance.usages[indexPath.row]
             UserDataService.instance.usages.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            notificationCenter.removePendingNotificationRequests(withIdentifiers: [endusage.id.uuidString])
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -141,18 +147,43 @@ class UsageTVC: UITableViewController {
             
             if (name != "" && name != nil) && (dose != "" && dose != nil) && (period != "" && period != nil){
                 
-                        let druguseage = DrugUsage(name: name!, period: period!, dose: dose!)
+                var druguseage = DrugUsage(name: name!, period: period!, dose: dose!, id: UUID.init())
                                 
-                        UserDataService.instance.usages.append(druguseage)
-                        
-                                
-                        self.tableView.reloadData()
+                UserDataService.instance.usages.append(druguseage)
+                
+                
+                
+                
+                let content = UNMutableNotificationContent()
+                
+                
+                content.title = "Reminder"
+                
+                content.body = "use \(dose!) of \(name!)"
+                content.sound = UNNotificationSound.default
+                content.badge = 1
+                
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (Double(period!)! * 60), repeats: true)
+            
+                let request = UNNotificationRequest(identifier: druguseage.id.uuidString, content: content, trigger: trigger)
+                
+                self.notificationCenter.add(request) { error in
+                    if let error = error  {
+                        print("Error \(error.localizedDescription)")
+                    } else{
+                        druguseage.isRunning = true
+                    }
+                }
+
+                self.tableView.reloadData()
 
             }else{
                 alert.message = "please complet all fields !"
                 self.present(alert, animated: true, completion: nil)
             }
         }
+        
 
         
         
