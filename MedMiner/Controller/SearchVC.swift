@@ -37,13 +37,6 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             
         self.searchTableView.reloadData()
         
-        tap = addGestureConfig()
-        tap.delegate = self
-        view.addGestureRecognizer(tap)
-        
-        menuGestureConfig()
-        
-        
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByToken { (success) in
                 if success{
@@ -58,7 +51,13 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         // Do any additional setup after loading the view.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tap = addGestureConfig()
+        tap.delegate = self
+        view.addGestureRecognizer(tap)
+        menuGestureConfig()
+    }
     
     
     func setUpView() {

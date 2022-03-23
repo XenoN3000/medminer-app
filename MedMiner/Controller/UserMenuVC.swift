@@ -52,9 +52,7 @@ class UserMenuVC: UIViewController{
             print(UserDataService.instance.Name)
             loginBtn.setTitle(UserDataService.instance.Name, for: .normal)
         }else{
-            
             loginBtn.setTitle("LogIn", for: .normal)
-            
         }
     }
     
